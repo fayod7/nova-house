@@ -3,7 +3,7 @@ import { memo } from 'react';
 const Footer = () => {
   return (
       <footer>
-          salom footer
+          salom footerccmcmmmjijijijiji
   </footer>
   );
 };
