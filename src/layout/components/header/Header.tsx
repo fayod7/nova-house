@@ -2,7 +2,9 @@ import { memo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../shared/assets/nova-logo.svg'
 import { Menu, Search, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 const Header = () => {
+  const { t } = useTranslation();
    const [isScroll, setIsScroll] = useState<boolean>(false)
    const [isOpen, setIsOpen] = useState<boolean>(false);
     useEffect(() => {
@@ -20,16 +22,18 @@ const Header = () => {
       <nav className="container flex items-center justify-between">
         <ul className={`gap-4 items-center hidden md:flex  text-[19px] ${isScroll ? 'text-sm' : 'text-[19px]'}`}>
           <li>
-            <Link to={'/'}>Home</Link>
+            <Link to={'/'}>{t("header.home")}</Link>
           </li>
           <li>
-            <Link to={'/collections'}>Collections</Link>
+            <Link to={'/collections'}>{t("header.collection")}</Link>
           </li>
           <li>
-            <Link to={'/contact'}>Contact</Link>
+            <Link to={'/contact'}>{t("header.contact")}</Link>
           </li>
           <li>
-            <Link to={'/team'}>Our Team</Link>
+            <Link to={'/team'}>
+            {t("header.team")}
+            </Link>
           </li>
         </ul>
         <>
@@ -39,10 +43,14 @@ const Header = () => {
         </>
         <ul className={`gap-4 items-center  hidden md:flex text-[19px] ${isScroll ? 'text-sm' : 'text-[19px]'}`}>
           <li>
-            <Link to={'/about'}>About</Link>
+            <Link to={'/about'}>
+              {t("header.about")}
+            </Link>
           </li>
           <li>
-            <Link to={'/company'}>Company</Link>
+            <Link to={'/company'}>
+            {t("header.company")}
+            </Link>
           </li>
           <li>
             <Link to={'/search'}>

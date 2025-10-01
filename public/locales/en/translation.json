@@ -10,5 +10,13 @@
       "team": "Team"
     },
     "location": "Masko Mobilya Kenti 14B NO 17-19, 34306 İkitelli – Başakşehir / İstanbul"
+  },
+  "header": {
+    "home": "Homepage",
+    "about": "About",
+    "collection": "Collection",
+    "contact": "Contact Us",
+    "team": "Team",
+    "company": "Company"
   }
 }
