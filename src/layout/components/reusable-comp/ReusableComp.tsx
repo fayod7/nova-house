@@ -11,7 +11,7 @@ const ReusableComp:FC<Props> = (props) => {
   return (
     <div 
     style={{ backgroundImage: `url(${heroBg})` }}
-    className='w-full h-[600px] bg-cover bg-center grid place-items-center'>
+    className='w-full h-[450px] bg-cover bg-center grid place-items-center'>
       <h2 className='text-white text-3xl font-medium'>
         {title}
       </h2>
