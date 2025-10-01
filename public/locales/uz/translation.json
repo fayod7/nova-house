@@ -7,5 +7,13 @@
     "collection": "To‘plam",
     "contact": "Biz bilan bog‘laning",
     "team": "Jamoa"
+  },
+  "header": {
+    "home": "Asosiy sahifa",
+    "about": "Biz haqimizda",
+    "collection": "Kollektsiyalar",
+    "contact": "Bizga aloqaga chiqing",
+    "team": "Jamoa",
+    "company": "Kompaniya"
   }
 }
