@@ -25,6 +25,12 @@ const Header = () => {
           <li>
             <Link to={'/collections'}>Collections</Link>
           </li>
+          <li>
+            <Link to={'/contact'}>Contact</Link>
+          </li>
+          <li>
+            <Link to={'/team'}>Our Team</Link>
+          </li>
         </ul>
         <>
           <Link to={'/'} className={`${isScroll ? 'size-[75px]' : 'size-[100px]'}`}>
@@ -61,6 +67,8 @@ const Header = () => {
          <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
          
          <li><Link to="/collections" onClick={() => setIsOpen(false)}>Collections</Link></li>
+         <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+         <li><Link to="/team" onClick={() => setIsOpen(false)}>Contact</Link></li>
          <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
          <li><Link to="/company" onClick={() => setIsOpen(false)}>Company</Link></li>
          <li><Link to="/search" onClick={() => setIsOpen(false)}>Search</Link></li>
