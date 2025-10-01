@@ -6,7 +6,7 @@ const Footer = () => {
   const { t } = useTranslation();
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-[#1e1e1e] mt-[600px]">
+    <footer className="bg-[#1e1e1e] ">
       <div className="container grid grid-cols-3 ">
         <div className="pt-[50px]  ">
           <div className="border-l-[2px] border-l-[#fff] pl-[10px]">
