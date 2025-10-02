@@ -20,8 +20,10 @@ const Footer = () => {
   };
   return (
     <footer className="bg-[#1e1e1e] pb-50px">
-      <div className="container grid grid-cols-3 gap-[20px] max-[1060px]:grid-cols-2 
-      max-[600px]:grid-cols-1">
+      <div
+        className="container grid grid-cols-3 gap-[20px] max-[1060px]:grid-cols-2 
+      max-[600px]:grid-cols-1"
+      >
         <div className="pt-[50px]  ">
           <div className="border-l-[2px] border-l-[#fff] pl-[10px] flex flex-col h-[80%] ">
             <p className="text-[#fff] text-[25px] font-extralight">
@@ -43,7 +45,7 @@ const Footer = () => {
                   id=""
                 />
                 <button className="text-[14px] text-[#c5c5c5]">
-                  SUBSCRIBER
+                  {t("footer.button.subscribe")}
                 </button>
               </form>
             </div>
@@ -54,17 +56,17 @@ const Footer = () => {
         </div>
 
         <div className="boder">
-          <img className="max-w-[300px] blobk mx-auto " src={logo} alt="" />
+          <img className="max-w-[300px] blobk mx-auto max-[600px]:max-w-[200px]" src={logo} alt="" />
         </div>
-        <div className="pt-[50px] max-[1060px]:col-span-2 max-[600px]:col-span-1">
-          <ul className="flex items-center max-[1060px]:justify-center gap-[20px] text-[#c9c9c9] font-extralight text-[14px]">
+        <div className="pt-[50px] max-[1060px]:col-span-2 max-[600px]:col-span-1 max-[600px]:pt-[0]">
+          <ul className="flex items-center max-[1060px]:justify-center gap-[20px] text-[#c9c9c9] font-extralight text-[14px] ">
             <li>
               <NavLink className={"link"} to={"/"}>
                 {t("footer.links.homepage")}
               </NavLink>
             </li>
             <li>
-              <NavLink className={"link"} to={"/collection"}>
+              <NavLink className={"link"} to={"/collections"}>
                 {t("footer.links.collection")}
               </NavLink>
             </li>
