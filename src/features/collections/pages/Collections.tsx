@@ -4,6 +4,7 @@ import { useCategory } from '../services/useCategories';
 import { useCollections } from '../services/useCollections';
 import CollectionsView from '../components/CollectionsView';
 import CollectionsViewEmpty from '../components/CollectionsViewEmpty';
+import CollectionsViewSkeleton from '../components/CollectionsViewSkeleton';
 
 interface ICategory {
   id: number;
@@ -14,54 +15,73 @@ interface ICategory {
 }
 
 const Collections = () => {
-  const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(null);
+  const [selectedInteriorId, setSelectedInteriorId] = useState<number | null>(null);
+  const [selectedExteriorId, setSelectedExteriorId] = useState<number | null>(null);
+
   const { getCategories } = useCategory();
-  const { data } = getCategories();
+  const { data, isLoading: isCategoriesLoading } = getCategories();
 
   const { getCollections, getCollectionsById } = useCollections();
-  const { data: allcollectionsData } = getCollections();
-  const { data: filteredCollections } = getCollectionsById(selectedCategoryId)
+  const { data: allcollectionsData, isLoading: isCollectionsLoading } = getCollections();
+
+  const activeCategoryId = selectedInteriorId || selectedExteriorId;
+  const { data: filteredCollections, isLoading: isFilteredLoading } = getCollectionsById(activeCategoryId);
 
   const exteriorCategories = data?.filter((category: ICategory) => category.type === 'exterior') || [];
-    const interiorCategories = data?.filter((category: ICategory) => category.type === 'interior') || [];
-  const items = selectedCategoryId
-  ? filteredCollections?.data?.items
-  : allcollectionsData?.data?.items;
+  const interiorCategories = data?.filter((category: ICategory) => category.type === 'interior') || [];
+
+  const items = activeCategoryId
+    ? filteredCollections?.data?.items
+    : allcollectionsData?.data?.items;
+  const isLoading = isCategoriesLoading || isCollectionsLoading || isFilteredLoading;
   return (
     <>
       <ReusableComp title="Collections" />
-    <div className="py-16">
+      <div className="py-16">
         <h2 className="text-3xl text-center">Collections</h2>
 
         <div className="flex gap-10 items-center justify-center mt-5">
           <select
-            value={selectedCategoryId || ""}
-            onChange={(e) =>
-              setSelectedCategoryId(e.target.value ? Number(e.target.value) : null)
-            }
+            value={selectedInteriorId || ""}
+            onChange={(e) => {
+              setSelectedInteriorId(e.target.value ? Number(e.target.value) : null);
+              setSelectedExteriorId(null);
+            }}
             className="border py-3.5 px-10"
           >
-            <option value="">All Collections</option>
-            {exteriorCategories.map((cat:ICategory) => (
+            <option value="">All Interiors</option>
+            {interiorCategories.map((cat: ICategory) => (
               <option key={cat.id} value={cat.id}>
-                {cat.name} (Exterior)
+                {cat.name}
               </option>
             ))}
-            {interiorCategories.map((cat:ICategory) => (
+          </select>
+
+          <select
+            value={selectedExteriorId || ""}
+            onChange={(e) => {
+              setSelectedExteriorId(e.target.value ? Number(e.target.value) : null);
+              setSelectedInteriorId(null);
+            }}
+            className="border py-3.5 px-10"
+          >
+            <option value="">All Exteriors</option>
+            {exteriorCategories.map((cat: ICategory) => (
               <option key={cat.id} value={cat.id}>
-                {cat.name} (Interior)
+                {cat.name}
               </option>
             ))}
           </select>
         </div>
       </div>
 
-       {items && items.length > 0 ? (
-      <CollectionsView data={items} />
-    ) : (
-      <CollectionsViewEmpty />
-    )}
-
+      {isLoading ? (
+        <CollectionsViewSkeleton />
+      ) : items && items.length > 0 ? (
+        <CollectionsView data={items} />
+      ) : (
+        <CollectionsViewEmpty />
+      )}
     </>
   );
 };
