@@ -1,0 +1,51 @@
+.custom-prev,
+.custom-next {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.142) !important;
+  color: #fff !important;
+  font-size: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.custom-prev {
+  left: 10px !important;
+  animation: moveLeft 2s infinite alternate ease-in-out !important;
+}
+
+.custom-next {
+  right: 10px !important;
+  animation: moveRight 2s infinite alternate ease-in-out !important;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background: #0000006d !important; 
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translate(-5px, -50%);
+  }
+  to {
+    transform: translate(5px, -50%);
+  }
+}
+
+@keyframes moveRight {
+  from {
+    transform: translate(5px, -50%);
+  }
+  to {
+    transform: translate(-5px, -50%);
+  }
+}
