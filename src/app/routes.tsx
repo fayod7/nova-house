@@ -9,6 +9,7 @@ const Contact = lazy(() => import('../features/contact/pages/Contact'))
 const Company = lazy(() => import('../features/company/pages/Company'))
 const About = lazy(() => import('../features/about/pages/About'))
 const Collections = lazy(() => import('../features/collections/pages/Collections'))
+const CollectionDetails = lazy(() => import('../features/collections/pages/CollectionDetails'))
 const Team = lazy(() => import('../features/team/pages/Team'))
 const NotFound = lazy(() => import('../features/notfound/pages/NotFound'))
 
@@ -25,6 +26,7 @@ const AppRoutes = () => {
            {path: 'contact', element: <Contact/>},
            {path: 'company', element: <Company/>},
            {path: 'team', element: <Team/>},
+           {path: 'collections/:id', element: <CollectionDetails/>},
         ]
     },
     { path: '*', element: <NotFound /> },
