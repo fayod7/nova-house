@@ -8,8 +8,6 @@ const CollectionDetails = () => {
   const toString = id?.toString();
   const { data } = getCollectionsById(toString);
   const info = data?.data;
-  console.log(info);
-  
 
   return (
     <section className="mb-[120px]">
