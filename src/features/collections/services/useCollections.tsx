@@ -12,9 +12,9 @@ export const useCollections = () => {
         staleTime: 1000 * 60 * 30
     })
 
-    const getCollectionsById = (categoryId: number | null) => useQuery<any, any>({
+    const getCollectionsById = (categoryId: string | undefined) => useQuery<any, any>({
         queryKey: [collectionsKey, categoryId],
-        queryFn: () => api.get(`collections?category_id=${categoryId}`).then((res) => res.data),
+        queryFn: () => api.get(`collections/${categoryId}`).then((res) => res.data),
       enabled: !!categoryId, 
       gcTime: 1000 * 60 * 60,
       staleTime: 1000 * 60 * 30,
