@@ -22,5 +22,12 @@
     "contact": "Contact Us",
     "team": "Team",
     "company": "Company"
+  },
+  "contactsForm": {
+    "name": "Your name",
+    "number": "Your Phone Number",
+    "address": "Your address",
+    "square": "How many squares do you need",
+    "type": "Choose design"
   }
 }

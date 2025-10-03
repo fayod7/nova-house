@@ -52,7 +52,7 @@ const Header = () => {
           </div>
         </div>
       <header
-        className={`w-full text-white sticky top-0 left-0 z-100 transition-all duration-300
+        className={`w-full text-[#c9c9c9] sticky top-0 left-0 z-100 transition-all duration-300
           ${isScroll ? " bg-[#1e1e1e] " : "bg-[#00000097]"}`}
       >
         <nav className="container flex items-center justify-between">
@@ -61,14 +61,14 @@ const Header = () => {
             ${isScroll ? "text-sm" : "text-[16px]"}`}
           >
             <li>
-              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/"}>{t("header.home")}</NavLink>
+              <NavLink className={'header__link'} to={"/"}>{t("header.home")}</NavLink>
             </li>
             <li>
-              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/collections"}>{t("header.collection")}</NavLink>
+              <NavLink className={'header__link'} to={"/collections"}>{t("header.collection")}</NavLink>
             </li>
 
             <li>
-              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/team"}>{t("header.team")}</NavLink>
+              <NavLink className={'header__link'} to={"/team"}>{t("header.team")}</NavLink>
             </li>
           </ul>
 
@@ -87,13 +87,13 @@ const Header = () => {
             ${isScroll ? "text-sm" : "text-[16px]"}`}
           >
             <li>
-              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/about"}>{t("header.about")}</NavLink>
+              <NavLink className={'header__link'} to={"/about"}>{t("header.about")}</NavLink>
             </li>
             <li>
-              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/company"}>{t("header.company")}</NavLink>
+              <NavLink className={'header__link'} to={"/company"}>{t("header.company")}</NavLink>
             </li>
             <li>
-              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/contact"}>{t("header.contact")}</NavLink>
+              <NavLink className={'header__link'} to={"/contact"}>{t("header.contact")}</NavLink>
             </li>
             <li>
               <NavLink to={"/search"}>
