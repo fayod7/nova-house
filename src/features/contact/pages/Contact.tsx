@@ -1,9 +1,10 @@
 import { memo } from 'react';
+import ReusableComp from '../../../layout/components/reusable-comp/ReusableComp';
 
 const Contact = () => {
   return (
     <div>
-      <h2>Contact</h2>
+      <ReusableComp title='Contact' />
     </div>
   );
 };

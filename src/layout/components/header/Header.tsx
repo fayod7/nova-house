@@ -1,5 +1,5 @@
 import { memo, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../shared/assets/nova-logo.svg";
 import { Instagram, Menu, Search, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -61,14 +61,14 @@ const Header = () => {
             ${isScroll ? "text-sm" : "text-[16px]"}`}
           >
             <li>
-              <Link to={"/"}>{t("header.home")}</Link>
+              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/"}>{t("header.home")}</NavLink>
             </li>
             <li>
-              <Link to={"/collections"}>{t("header.collection")}</Link>
+              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/collections"}>{t("header.collection")}</NavLink>
             </li>
 
             <li>
-              <Link to={"/team"}>{t("header.team")}</Link>
+              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/team"}>{t("header.team")}</NavLink>
             </li>
           </ul>
 
@@ -87,22 +87,22 @@ const Header = () => {
             ${isScroll ? "text-sm" : "text-[16px]"}`}
           >
             <li>
-              <Link to={"/about"}>{t("header.about")}</Link>
+              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/about"}>{t("header.about")}</NavLink>
             </li>
             <li>
-              <Link to={"/company"}>{t("header.company")}</Link>
+              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/company"}>{t("header.company")}</NavLink>
             </li>
             <li>
-              <Link to={"/contact"}>{t("header.contact")}</Link>
+              <NavLink className={'header__link decoration-2 underline-offset-4'} to={"/contact"}>{t("header.contact")}</NavLink>
             </li>
             <li>
-              <Link to={"/search"}>
+              <NavLink to={"/search"}>
                 <Search
                   className={`transition-all duration-300 ${
                     isScroll ? "size-[20px]" : "size-[25px]"
                   }`}
                 />
-              </Link>
+              </NavLink>
             </li>
           </ul>
 

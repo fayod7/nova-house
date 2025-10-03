@@ -5,6 +5,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./HoverProduct.css";
+import { MoveLeft, MoveRight } from "lucide-react";
 
 interface Props {
   data: any;
@@ -19,7 +20,6 @@ const HoverProduct: FC<Props> = ({ data }) => {
     <section>
       <div className=" w-full mx-auto relative mb-[120px]">
         <Swiper
-          loop={true}
           autoplay={{
             delay: 6000,
             disableOnInteraction: false,
@@ -53,11 +53,11 @@ const HoverProduct: FC<Props> = ({ data }) => {
           ))}
         </Swiper>
 
-        <div ref={prevRef} className="custom-prev select-none !important">
-          ←
+        <div ref={prevRef} className="custom-prev select-none !important grid place-items-center">
+          <MoveLeft />
         </div>
         <div ref={nextRef} className="custom-next select-none !important">
-          →
+          <MoveRight/>
         </div>
       </div>
     </section>
