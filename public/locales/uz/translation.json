@@ -21,7 +21,13 @@
     "contact": "Aloqa uchun",
     "team": "Jamoa",
     "company": "Kompaniya"
+  },
+  "contactsForm": {
+    "name": "Ismingiz",
+    "number": "Telefon raqamingiz",
+    "address": "Manzilingiz",
+    "square": "Necha kvadrat metr kerak",
+    "type": "Dizayn tanlang"
   }
-
 
 }
