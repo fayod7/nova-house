@@ -29,3 +29,8 @@
     background-position: 200% 0;
   }
 }
+
+.header__link.active{
+  text-decoration: underline;
+  color: #CCCCCC;
+}
