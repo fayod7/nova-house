@@ -135,32 +135,37 @@ const Header = () => {
           </li>
           <li>
             <Link to="/" onClick={() => setIsOpen(false)}>
-              Home
+              {t("header.home")}
             </Link>
           </li>
           <li>
             <Link to="/collections" onClick={() => setIsOpen(false)}>
-              Collections
+              {t("header.collection")}
             </Link>
           </li>
           <li>
             <Link to="/team" onClick={() => setIsOpen(false)}>
-              Contact
+              {t("header.team")}
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" onClick={() => setIsOpen(false)}>
+              {t("header.contact")}
             </Link>
           </li>
           <li>
             <Link to="/about" onClick={() => setIsOpen(false)}>
-              About
+              {t("header.about")}
             </Link>
           </li>
           <li>
             <Link to="/company" onClick={() => setIsOpen(false)}>
-              Company
+              {t("header.company")}
             </Link>
           </li>
           <li>
             <Link to="/search" onClick={() => setIsOpen(false)}>
-              Search
+              {t("header.search")}
             </Link>
           </li>
         </ul>
