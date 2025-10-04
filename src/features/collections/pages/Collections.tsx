@@ -70,7 +70,7 @@ const Collections = () => {
             label="Interiors"
             options={interiorCategories}
             selected={selectedInteriorId}
-            onSelect={(val) => handleSelect("interior", val)}
+            onSelect={(val) => handleSelect("interior", val ? Number(val) : null)}
             allLabel="All Interiors"
           />
 
