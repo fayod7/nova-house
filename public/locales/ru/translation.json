@@ -19,7 +19,8 @@
     "collection": "Коллекция",
     "contact": "Свяжитесь с нами",
     "team": "Команда",
-    "company": "Компания"
+    "company": "Компания", 
+    "search": "Поиск"
   },
   "contactsForm": {
     "name": "Ваше имя",

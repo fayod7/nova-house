@@ -21,7 +21,8 @@
     "collection": "Collection",
     "contact": "Contact Us",
     "team": "Team",
-    "company": "Company"
+    "company": "Company",
+    "search": "Поиск"
   },
   "contactsForm": {
     "name": "Your name",
