@@ -20,10 +20,7 @@ const HoverProduct: FC<Props> = ({ data }) => {
     <section>
       <div className=" w-full mx-auto relative mb-[120px]">
         <Swiper
-          autoplay={{
-            delay: 6000,
-            disableOnInteraction: false,
-          }}
+          
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,

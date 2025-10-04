@@ -11,19 +11,21 @@ const CollectionDetails = () => {
 
   return (
     <section className="mb-[120px]">
-      <div className="flex items-center justify-between h-[420px]">
-        <div className="h-[100%] w-[50%]">
+      <div className="flex items-center justify-between h-[420px] max-[700px]:flex-col">
+        <div className="h-[100%] w-[50%] max-[700px]:w-[100%]">
           <img
             className="block object-cover max-h-[100%] max-w-[100%] w-[100%]"
             src={`https://images.carwashgo.uz/collections/${info?.mainImage?.image_url}`}
             alt=""
           />
         </div>
-        <div className="w-[50%] h-[100%] flex items-center justify-center bg-[#f5f5f5]">
-          <h2 className="text-[30px] font-extralight">{info?.title}</h2>
+        <div className="w-[50%] max-[700px]:w-[100%] h-[100%] flex items-center justify-center bg-[#f5f5f5]">
+          <h2 className="text-[30px]  max-[700px]:py-[30px] font-extralight">
+            {info?.title}
+          </h2>
         </div>
       </div>
-      <div className="container py-[60px]">
+      <div className="container py-[60px] max-[700px]:mt-[100px]">
         <p className="font-extralight text-center ">{info?.description_en}</p>
       </div>
       <div className="grid grid-cols-2 gap-[20px] ">
@@ -37,6 +39,7 @@ const CollectionDetails = () => {
           </div>
         ))}
       </div>
+      
     </section>
   );
 };
