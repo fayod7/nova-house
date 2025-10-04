@@ -8,11 +8,10 @@
       "collection": "To‘plam",
       "contact": "Aloqa uchun",
       "team": "Jamoa"
-
     },
-      "button":{
-    "subscribe":"Obuna"
-  }
+    "button": {
+      "subscribe": "Obuna"
+    }
   },
   "header": {
     "home": "Asosiy sahifa",
@@ -28,6 +27,7 @@
     "address": "Manzilingiz",
     "square": "Necha kvadrat metr kerak",
     "type": "Dizayn tanlang"
-  }
-
+  },
+  "collection": "Bizning to‘plamimiz",
+  "collection_text": "Bizning to‘plamimiz abadiy nafislik va zamonaviy jozibani o‘zida mujassam etib, uslub va qulaylikning mukammal uyg‘unligini taqdim etadi. Toza chiziqlar, hashamatli materiallar va mayda detallar bilan bu to‘plam har qanday joyda chiroyli va zamonaviy muhit yaratadi. Har bir buyum funksionallik va estetik go‘zallikni ta’minlash uchun ishlab chiqilgan bo‘lib, nafis dizayn va sifatni qadrlovchilar uchun ideal tanlovdir. Yashash xonangiz, yotoqxonangiz yoki ovqatlanish xonangizni boyitishidan qat’i nazar, bizning to‘plamimiz uyingizga nafislik va zamonaviylik uyg‘unligini olib kiradi hamda klassik go‘zallik bilan uyg‘unlashgan hashamatni taqdim etadi."
 }
