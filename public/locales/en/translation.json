@@ -29,5 +29,8 @@
     "address": "Your address",
     "square": "How many squares do you need",
     "type": "Choose design"
-  }
+  },
+  "collection": "Our Collection",
+  "collection_text":"Our Collection exudes timeless elegance and contemporary charm, offering a perfect balance of style and comfort. With its clean lines, luxurious materials, and attention to detail, this collection creates an inviting and sophisticated atmosphere in any space. Each piece is designed to deliver both functionality and aesthetic appeal, making it ideal for those who appreciate refined design and enduring quality. Whether enhancing your living room, bedroom, or dining area, our Collection transforms your home with its versatile and graceful presence, offering a blend of modern luxury and classic beauty."
+  
 }

@@ -1,4 +1,4 @@
-import { memo,  } from "react";
+import { memo, } from "react";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -6,12 +6,13 @@ import "./HoverProduct.css";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import stone from "../../../../shared/assets/stone.jpg"
-import ndStone from "../../../../shared/assets/ndStone.jpg"
+import livingRoom from "../../../../shared/assets/livingRoom.jpg"
+import bedroom from "../../../../shared/assets/bedroom.jpg"
+import kitchen from "../../../../shared/assets/kitchen.jpg"
 
-
+import "./HoverProduct.css"
 const HoverProduct = () => {
- 
+  
 
   return (
     <section>
@@ -71,20 +72,27 @@ const HoverProduct = () => {
         >
           <div
             className="w-full bg-cover bg-center min-h-[800px] max-[700px]:min-h-[600px]"
-            style={{ backgroundImage: `url(${stone})` }}
+            style={{ backgroundImage: `url(${livingRoom})` }}
           >
-            <div className="hotspot top-[69%] left-[33%]"></div>
-            <div className="hotspot top-[70%] left-[42%]"></div>
-            <div className="hotspot top-[88%] left-[45%]"></div>
-            <div className="hotspot top-[82%] left-[65%]"></div>
+            <div className="hotspot top-[57%] left-[27%]"></div>
+            <div className="hotspot top-[64%] left-[65%]"></div>
+            <div className="hotspot top-[71%] left-[42%]"></div>
+            <div className="hotspot top-[90%] left-[30%]"></div>
           </div>
           <div
             className="w-full bg-cover bg-center min-h-[800px] max-[700px]:min-h-[600px]"
-            style={{ backgroundImage: `url(${ndStone})` }}
+            style={{ backgroundImage: `url(${bedroom})` }}
           >
-            <div className="hotspot top-[61%] left-[65%]"></div>
-            <div className="hotspot top-[63%] left-[40%]"></div>
-            <div className="hotspot top-[70%] left-[47%]"></div>
+            <div className="hotspot top-[54%] left-[81%]"></div>
+            <div className="hotspot top-[68%] left-[77%]"></div>
+            <div className="hotspot top-[71%] left-[42%]"></div>
+          </div>
+          <div
+            className="w-full bg-cover bg-center min-h-[800px] max-[700px]:min-h-[600px]"
+            style={{ backgroundImage: `url(${kitchen})` }}
+          >
+            <div className="hotspot top-[60%] left-[72%]"></div>
+            <div className="hotspot top-[71%] left-[40%]"></div>
           </div>
         </Carousel>
       </div>

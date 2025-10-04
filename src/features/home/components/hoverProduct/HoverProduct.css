@@ -1,51 +1,61 @@
-.custom-prev,
-.custom-next {
-  position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 10 !important;
-  width: 40px !important;
-  height: 40px !important;
-  border-radius: 50% !important;
-  background: rgba(0, 0, 0, 0.142) !important;
-  color: #fff !important;
-  font-size: 20px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease-in-out !important;
+.hotspot {
+  position: absolute;
+  
+  cursor: pointer;
+
+  width: 20px;
+  height: 20px;
+  background-color: black; /* tashqi qora nuqta */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  animation: minmax 1s linear infinite;
 }
 
-.custom-prev {
-  left: 10px !important;
-  animation: moveLeft 2s infinite alternate ease-in-out !important;
+.hotspot::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: white; /* markazdagi oq nuqta */
+  border-radius: 50%;
+  z-index: 3;
 }
 
-.custom-next {
-  right: 10px !important;
-  animation: moveRight 2s infinite alternate ease-in-out !important;
+.hotspot::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #fff; /* yarim shaffof oq rang */
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+  z-index: 0;
 }
 
-.custom-prev:hover,
-.custom-next:hover {
-  background: #0000006d !important; 
-}
-
-@keyframes moveLeft {
-  from {
-    transform: translate(-5px, -50%);
+@keyframes pulse {
+  0% {
+    transform: scale(0); /* sakramasligi uchun 1 dan boshladik */
+    opacity: 0.6;
   }
-  to {
-    transform: translate(5px, -50%);
+  70% {
+    transform: scale(1.8); /* kattalashadi */
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0); /* yana boshlang‘ich holat */
+    opacity: 0;
   }
 }
-
-@keyframes moveRight {
-  from {
-    transform: translate(5px, -50%);
+@keyframes minmax {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: translate(-5px, -50%);
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
