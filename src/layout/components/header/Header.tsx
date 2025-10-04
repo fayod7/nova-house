@@ -71,6 +71,7 @@ const Header = () => {
               <NavLink className={'header__link'} to={"/team"}>{t("header.team")}</NavLink>
             </li>
           </ul>
+          
 
           <Link to={"/"} className="transition-all duration-300">
             <img
