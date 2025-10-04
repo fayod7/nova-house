@@ -1,39 +1,64 @@
-import { memo, useState } from 'react';
-import ReusableComp from '../../../layout/components/reusable-comp/ReusableComp';
-import { useCategory } from '../services/useCategories';
-import { useCollections } from '../services/useCollections';
-import CollectionsView from '../components/CollectionsView';
-import CollectionsViewEmpty from '../components/CollectionsViewEmpty';
-import CollectionsViewSkeleton from '../components/CollectionsViewSkeleton';
-
-interface ICategory {
-  id: number;
-  name: string;
-  type: "interior" | "exterior";
-  createdAt: string;
-  updatedAt: string;
-}
+import { memo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import ReusableComp from "../../../layout/components/reusable-comp/ReusableComp";
+import { useCategory } from "../services/useCategories";
+import { useCollections } from "../services/useCollections";
+import CollectionsView from "../components/CollectionsView";
+import CollectionsViewEmpty from "../components/CollectionsViewEmpty";
+import CollectionsViewSkeleton from "../components/CollectionsViewSkeleton";
+import ReusableDropdown from "../../../layout/components/reuseable-dropdown/ReusableDropdown";
 
 const Collections = () => {
+  const [params, setParams] = useSearchParams();
+  const { getCategories, getCollectionCategories } = useCategory();
+  const { getCollections } = useCollections();
+  console.log(params);
+  
+
   const [selectedInteriorId, setSelectedInteriorId] = useState<number | null>(null);
   const [selectedExteriorId, setSelectedExteriorId] = useState<number | null>(null);
 
-  const { getCategories } = useCategory();
-  const { data, isLoading: isCategoriesLoading } = getCategories();
-
-  const { getCollections, getCollectionsById } = useCollections();
-  const { data: allcollectionsData, isLoading: isCollectionsLoading } = getCollections();
-
   const activeCategoryId = selectedInteriorId || selectedExteriorId;
-  const { data: filteredCollections, isLoading: isFilteredLoading } = getCollectionsById(activeCategoryId);
 
-  const exteriorCategories = data?.filter((category: ICategory) => category.type === 'exterior') || [];
-  const interiorCategories = data?.filter((category: ICategory) => category.type === 'interior') || [];
+  const { data: categories, isLoading: isCategoriesLoading } = getCategories();
+
+  const interiorCategories =
+    categories?.filter((c:any) => c.type === "interior").map((c:any) => ({
+      label: c.name,
+      value: c.id,
+    })) || [];
+
+  const exteriorCategories =
+    categories?.filter((c:any) => c.type === "exterior").map((c:any) => ({
+      label: c.name,
+      value: c.id,
+    })) || [];
+
+  const { data: allCollectionsData, isLoading: isCollectionsLoading } =
+    getCollections(!activeCategoryId);
+  const { data: filteredCollections, isLoading: isFilteredLoading } =
+    getCollectionCategories(activeCategoryId);
 
   const items = activeCategoryId
     ? filteredCollections?.data?.items
-    : allcollectionsData?.data?.items;
-  const isLoading = isCategoriesLoading || isCollectionsLoading || isFilteredLoading;
+    : allCollectionsData?.data?.items;
+
+  const isLoading =
+    isCategoriesLoading || isCollectionsLoading || isFilteredLoading;
+
+  const handleSelect = (type: "interior" | "exterior", value: number | null) => {
+    if (type === "interior") {
+      setSelectedInteriorId(value);
+      setSelectedExteriorId(null);
+    } else {
+      setSelectedExteriorId(value);
+      setSelectedInteriorId(null);
+    }
+
+    if (value) setParams({ category: String(value), type });
+    else setParams({});
+  };
+
   return (
     <>
       <ReusableComp title="Collections" />
@@ -41,37 +66,21 @@ const Collections = () => {
         <h2 className="text-3xl text-center">Collections</h2>
 
         <div className="flex gap-10 items-center justify-center mt-5">
-          <select
-            value={selectedInteriorId || ""}
-            onChange={(e) => {
-              setSelectedInteriorId(e.target.value ? Number(e.target.value) : null);
-              setSelectedExteriorId(null);
-            }}
-            className="border py-3.5 px-10"
-          >
-            <option value="">All Interiors</option>
-            {interiorCategories.map((cat: ICategory) => (
-              <option key={cat.id} value={cat.id}>
-                {cat.name}
-              </option>
-            ))}
-          </select>
+          <ReusableDropdown
+            label="Interiors"
+            options={interiorCategories}
+            selected={selectedInteriorId}
+            onSelect={(val) => handleSelect("interior", val)}
+            allLabel="All Interiors"
+          />
 
-          <select
-            value={selectedExteriorId || ""}
-            onChange={(e) => {
-              setSelectedExteriorId(e.target.value ? Number(e.target.value) : null);
-              setSelectedInteriorId(null);
-            }}
-            className="border py-3.5 px-10"
-          >
-            <option value="">All Exteriors</option>
-            {exteriorCategories.map((cat: ICategory) => (
-              <option key={cat.id} value={cat.id}>
-                {cat.name}
-              </option>
-            ))}
-          </select>
+          <ReusableDropdown
+            label="Exteriors"
+            options={exteriorCategories}
+            selected={selectedExteriorId}
+            onSelect={(val:any) => handleSelect("exterior", val)}
+            allLabel="All Exteriors"
+          />
         </div>
       </div>
 
