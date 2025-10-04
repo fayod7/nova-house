@@ -4,10 +4,11 @@ import { api } from "../../../shared/api";
 export const collectionsKey = "collectionsKey";
 
 export const useCollections = () => {
-  const getCollections = () =>
+  const getCollections = (enabled: boolean = true) =>
     useQuery<any, any>({
       queryKey: [collectionsKey],
       queryFn: () => api.get("collections").then((res) => res.data),
+      enabled,
       gcTime: 1000 * 60 * 60,
       staleTime: 1000 * 60 * 30,
     });

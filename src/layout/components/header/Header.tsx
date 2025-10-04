@@ -112,61 +112,61 @@ const Header = () => {
         </nav>
       </header>
 
-      {isOpen && (
-        <div
-          onClick={() => setIsOpen(false)}
-          className="fixed inset-0 z-[999] backdrop-blur-sm"
-        >
-          <div
-            className={`md:hidden bg-white text-black absolute top-0 w-[250px] duration-300 h-screen 
-            ${isOpen ? "right-0" : "left-[-250px]"}`}
+      <>
+
+      <div
+        className={`fixed inset-0 z-[999] bg-black/30 backdrop-blur-sm transition-opacity duration-300 ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setIsOpen(false)}
+      ></div>
+
+      <div
+        className={`fixed top-0 right-0 w-[250px] h-screen bg-white text-black z-[1000] 
+        transform transition-transform duration-300 ease-in-out
+        ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <ul className="flex flex-col gap-4 p-6 text-lg">
+          <li
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-1.5 cursor-pointer"
           >
-            <ul className="flex flex-col gap-4 p-6 text-lg">
-              <li
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-1.5"
-              >
-                Close <X className="w-7 h-7" />
-              </li>
-              <li>
-                <Link to="/" onClick={() => setIsOpen(false)}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/collections" onClick={() => setIsOpen(false)}>
-                  Collections
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" onClick={() => setIsOpen(false)}>
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" onClick={() => setIsOpen(false)}>
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/company" onClick={() => setIsOpen(false)}>
-                  Company
-                </Link>
-              </li>
-              <li>
-                <Link to="/search" onClick={() => setIsOpen(false)}>
-                  Search
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      )}
+            Close <X className="w-7 h-7" />
+          </li>
+          <li>
+            <Link to="/" onClick={() => setIsOpen(false)}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/collections" onClick={() => setIsOpen(false)}>
+              Collections
+            </Link>
+          </li>
+          <li>
+            <Link to="/team" onClick={() => setIsOpen(false)}>
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={() => setIsOpen(false)}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/company" onClick={() => setIsOpen(false)}>
+              Company
+            </Link>
+          </li>
+          <li>
+            <Link to="/search" onClick={() => setIsOpen(false)}>
+              Search
+            </Link>
+          </li>
+        </ul>
+      </div>
+    
+      </>
     </>
   );
 };

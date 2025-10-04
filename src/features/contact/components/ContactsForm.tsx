@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { memo, useState, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
+import ReusableDropdown from '../../../layout/components/reuseable-dropdown/ReusableDropdown';
 
 
 const BOT_TOKEN = '8263287382:AAEeFqtE6Zp5CrFrv3fCce_eFnraRO4zJwk'
@@ -20,7 +21,7 @@ const ContactsForm = () => {
     const [number, setNumber] = useState<string>('')
     const [square, setSquare] = useState<string>('')
     const [address, setAddress] = useState<string>('')
-    const [type, setType] =  useState<string>('Exterior')
+    const [type, setType] =  useState<string>('')
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         const msg = {
@@ -49,6 +50,11 @@ Type: <b>${msg.type}</b>
 });
  handleReset()
     }
+    const typeOptions = [
+    { label: "Exterior", value: "exterior" },
+    { label: "Interior", value: "interior" },
+    { label: "Both Exterior & Interior", value: "both" },
+  ];
   return (
     <section className='py-[50px] w-full'>
       <div className="container grid grid-cols-2 max-[650px]:grid-cols-1">
@@ -114,21 +120,16 @@ Type: <b>${msg.type}</b>
             value={square}  type="text" />
             </div>
 
-            <div className='flex flex-col'>
-                <label htmlFor="type">
-                    {t("contactsForm.type")}
-                </label>
-                <select 
-                id='type'
-                required
-                className='border border-gray-200 py-2'
-                onChange={(e) => setType(e.target.value) }
-                value={type}>
-                    <option value="exterior">Exterior</option>
-                    <option value="interior">Interior</option>
-                    <option value="both">Both Exterior & Interior</option>
-                </select>
-            </div>
+            <div className="flex flex-col">
+            <label>{t("contactsForm.type")}:</label>
+            <ReusableDropdown
+              label="Type"
+              options={typeOptions}
+              selected={typeOptions.find((opt) => opt.value === type)?.value ?? null}
+              onSelect={(value) => setType(value as string)}
+              allLabel="Select Type"
+            />
+          </div>
             <div>
             <button className='border py-2 px-5 duration-200 hover:cursor-pointer hover:bg-black hover:text-white'>Submit</button>
             </div>
