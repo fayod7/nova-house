@@ -1,10 +1,14 @@
 import { memo } from 'react';
+import { useTeam } from '../services/useTeam';
+import TeamComp from '../components/TeamComp';
 
 const Team = () => {
+  const { getTeamMembers } = useTeam()
+  const { data } = getTeamMembers()  
   return (
-    <div>
-      <h2>Team</h2>
-    </div>
+    <section className='w-full py-[60px]'>
+      <TeamComp data={data}/>
+    </section>
   );
 };
 
