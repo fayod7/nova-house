@@ -61,7 +61,6 @@ const ReusableDropdown = ({
               key={opt.value ?? "all"}
               className="py-2 px-4 hover:bg-gray-100 cursor-pointer"
               onClick={() => {
-                // ✅ Ensure value is number if numeric
                 const parsedValue =
                   typeof opt.value === "string" && !isNaN(Number(opt.value))
                     ? Number(opt.value)
