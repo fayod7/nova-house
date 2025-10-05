@@ -1,4 +1,4 @@
-import { memo, } from "react";
+import { memo } from "react";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -6,14 +6,12 @@ import "./HoverProduct.css";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import livingRoom from "../../../../shared/assets/livingRoom.jpg"
-import bedroom from "../../../../shared/assets/bedroom.jpg"
-import kitchen from "../../../../shared/assets/kitchen.jpg"
+import livingRoom from "../../../../shared/assets/livingRoom.jpg";
+import bedroom from "../../../../shared/assets/bedroom.jpg";
+import kitchen from "../../../../shared/assets/kitchen.jpg";
 
-import "./HoverProduct.css"
+import "./HoverProduct.css";
 const HoverProduct = () => {
-  
-
   return (
     <section>
       <div>

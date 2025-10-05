@@ -1,6 +1,6 @@
 .hotspot {
   position: absolute;
-  
+
   cursor: pointer;
 
   width: 20px;
@@ -58,4 +58,21 @@
   100% {
     transform: scale(1);
   }
+}
+.card{
+  max-width: 300px;
+  width: 100%;
+padding: 16px;
+cursor: pointer;
+}
+.card-title{
+text-align: center; 
+font-size: 20px;
+font-weight: 300;
+letter-spacing: 2px;
+
+}
+.inner-div{
+background:#fff;
+padding-bottom: 20px;
 }
