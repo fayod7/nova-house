@@ -20,19 +20,19 @@ const Collections = () => {
 
   const activeCategoryId = selectedInteriorId || selectedExteriorId;
 
-  const { data: categories, isLoading: isCategoriesLoading } = getCategories();
+  const { data: categoriesData, isLoading: isCategoriesLoading } = getCategories();
 
-  const interiorCategories =
-    categories?.filter((c:any) => c.type === "interior").map((c:any) => ({
-      label: c.name,
-      value: c.id,
-    })) || [];
+const categories = Array.isArray(categoriesData) 
+  ? categoriesData 
+  : categoriesData?.data || [];
 
-  const exteriorCategories =
-    categories?.filter((c:any) => c.type === "exterior").map((c:any) => ({
-      label: c.name,
-      value: c.id,
-    })) || [];
+const interiorCategories = categories
+  .filter((c:any) => c.type === "interior")
+  .map((c:any) => ({ label: c.name, value: c.id }));
+
+const exteriorCategories = categories
+  .filter((c:any) => c.type === "exterior")
+  .map((c:any) => ({ label: c.name, value: c.id }));
 
   const { data: allCollectionsData, isLoading: isCollectionsLoading } =
     getCollections(!activeCategoryId);
