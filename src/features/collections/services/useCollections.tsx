@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import { api } from "../../../shared/api";
 
 export const collectionsKey = "collectionsKey";
-
 export const useCollections = () => {
   const getCollections = (enabled: boolean = true) =>
     useQuery<any, any>({

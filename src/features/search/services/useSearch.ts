@@ -11,7 +11,7 @@ export const useSearch = () => {
 
     const getCollectionsBySearch = (params: IParams) => useQuery({
         queryKey: [useSearchKey, params],
-        queryFn: () => api.get(`collections?search=${params.query}`, {params}).then(res => res.data),
+        queryFn: () => api.get("collections", { params: { search: params.query } }).then(res => res.data),
         enabled: !!params.query
     })
 
