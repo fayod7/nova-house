@@ -38,7 +38,6 @@ interface Props{
 }
 
 const CollectionsView:FC<Props> = ({ data }) => {
-  
   // const { i18n } = useTranslation()
   // const lang = i18n.language
   // const getDescription = (item: ICollection) => {
@@ -61,7 +60,7 @@ const CollectionsView:FC<Props> = ({ data }) => {
         data?.map((item:ICollection)=> (
           <div key={item.id} className='flex flex-col gap-2'>
               <div className='w-full h-[300px]'>
-                <img onClick={() => navigate(`/collections/${item.id}`)} className='h-full object-cover w-full' src={`https://images.carwashgo.uz/collections/${item.mainImage.image_url}`} alt="" />
+                <img onClick={() => navigate(`/collections/${item.id}`)} className='h-full object-cover w-full' src={`${import.meta.env.VITE_API_IMAGES}${item.mainImage.image_url}`} alt="" />
               </div>
                 <div className="flex flex-col gap-1.5 items-center py-3">
             <h2 className="text-lg font-medium">{item.title}</h2>
