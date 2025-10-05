@@ -125,10 +125,10 @@ const HoverProduct = () => {
             <div
               onMouseEnter={() => setStrangeTable(true)}
               onMouseLeave={() => setStrangeTable(false)}
-              className="hotspot absolute top-[61%] left-[65%]"
+              className="hotspot absolute top-[60%] left-[65%]"
             ></div>
             <div
-              className={`card absolute top-[34%] left-[44%] z-15 transition-all duration-300 ${
+              className={`card absolute top-[34%] left-[45%] z-15 transition-all duration-300 ${
                 strangeTable
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible translate-y-6"
@@ -143,10 +143,10 @@ const HoverProduct = () => {
             <div
               onMouseEnter={() => setTableNd(true)}
               onMouseLeave={() => setTableNd(false)}
-              className="hotspot absolute top-[63%] left-[40%]"
+              className="hotspot absolute top-[61%] left-[40%]"
             ></div>
             <div
-              className={`card absolute top-[36%] left-[18%] z-15 transition-all duration-300 ${
+              className={`card absolute top-[36%] left-[20%] z-15 transition-all duration-300 ${
                 tableNd
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible translate-y-6"
@@ -161,10 +161,10 @@ const HoverProduct = () => {
             <div
               onMouseEnter={() => setCircleChair(true)}
               onMouseLeave={() => setCircleChair(false)}
-              className="hotspot absolute top-[70%] left-[47%]"
+              className="hotspot absolute top-[68%] left-[47%]"
             ></div>
             <div
-              className={`card absolute top-[42%] left-[26%] z-15 transition-all duration-300 ${
+              className={`card absolute top-[42%] left-[27%] z-15 transition-all duration-300 ${
                 circleChair
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible translate-y-6"

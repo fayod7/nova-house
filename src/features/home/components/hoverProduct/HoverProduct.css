@@ -60,10 +60,11 @@
   }
 }
 .card{
-  max-width: 300px;
+  max-width: 280px;
   width: 100%;
 padding: 16px;
 cursor: pointer;
+pointer-events: none;
 }
 .card-title{
 text-align: center; 
