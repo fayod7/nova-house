@@ -1,9 +1,8 @@
 import { memo, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../../shared/assets/nova-logo.svg";
 import { Instagram, Menu, Search, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
-
+import logo from '../../../shared/assets/nova-logo.png'
 const Header = () => {
   const { t } = useTranslation();
   const [isScroll, setIsScroll] = useState<boolean>(false);
@@ -73,14 +72,15 @@ const Header = () => {
           </ul>
           
 
-          <Link to={"/"} className="transition-all duration-300">
+          <Link to={"/"} className="transition-all duration-300 flex flex-col items-center text-[#c9c9c9]">
             <img
               src={logo}
               alt=""
               className={`${
-                isScroll ? "w-[75px]" : "w-[100px]"
-              } transition-all duration-300 `}
+                isScroll ? "w-[50px]" : "w-[75px]"
+              } transition-all duration-300 bg-transparent`}
             />
+            <span className="font-bold">Nova House</span>
           </Link>
 
           <ul
