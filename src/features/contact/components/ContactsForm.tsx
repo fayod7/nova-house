@@ -4,10 +4,6 @@ import { useTranslation } from 'react-i18next';
 import ReusableDropdown from '../../../layout/components/reuseable-dropdown/ReusableDropdown';
 
 
-const BOT_TOKEN = '8263287382:AAEeFqtE6Zp5CrFrv3fCce_eFnraRO4zJwk'
-
-const CHAT_ID = '-1003173277714'
-
 const ContactsForm = () => {
     const { t } = useTranslation()
     const handleReset = () => {
@@ -33,9 +29,9 @@ const ContactsForm = () => {
         }
         
 
-       axios.get(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+       axios.get(`https://api.telegram.org/bot${import.meta.env.VITE_BOT_TOKEN}/sendMessage`, {
         params: {
-        chat_id: CHAT_ID,
+        chat_id: import.meta.env.VITE_CHAT_ID,
         text: `
 <b>New Order</b>
 

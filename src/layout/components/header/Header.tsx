@@ -1,6 +1,6 @@
 import { memo, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Instagram, Menu, Search, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logo from '../../../shared/assets/nova-logo.png'
 const Header = () => {
@@ -44,10 +44,6 @@ const Header = () => {
                 RU
               </button>
             </div>
-            <a href="#" className="flex items-center gap-1">
-              <Instagram />
-              <span>1.1M Followers</span>
-            </a>
           </div>
         </div>
       <header
