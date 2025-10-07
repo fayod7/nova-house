@@ -5,11 +5,13 @@ import HoverProduct from "../components/hoverProduct/HoverProduct";
 
 import Text from "../components/Text";
 import SecondHoverProduct from "../components/hoverProduct/SecondHoverProduct";
+import TelegramLink from "../components/TelegramLink";
 
 const Home = () => {
   return (
     <div>
       <Hero />
+      <TelegramLink/>
       <Overview />
       <HoverProduct />
       <Text />
