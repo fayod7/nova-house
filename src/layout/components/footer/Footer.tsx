@@ -5,7 +5,9 @@ import { NavLink } from "react-router-dom";
 import "./Footer.css";
 import { Facebook, Instagram } from "lucide-react";
 import { FaPinterestP } from "react-icons/fa";
+
 const Footer = () => {
+
   const [clean, setClean] = useState<string>("");
   const { t } = useTranslation();
   const year = new Date().getFullYear();
@@ -40,7 +42,8 @@ const Footer = () => {
                   onChange={(e) => setClean(e.target.value)}
                   className="placeholder:text-[#c5c5c5] text-[13px] text-[#c5c5c5] outline-0 flex-1"
                   placeholder="E-Mail"
-                  type="text"
+                  type="email"
+                  required
                   name=""
                   id=""
                 />
@@ -57,6 +60,7 @@ const Footer = () => {
 
         <div className="boder">
           <img className="max-w-[300px] blobk mx-auto max-[600px]:max-w-[200px]" src={logo} alt="" />
+          
         </div>
         <div className="pt-[50px] max-[1060px]:col-span-2 max-[600px]:col-span-1 max-[600px]:pt-[0]">
           <ul className="flex items-center max-[1060px]:justify-center gap-[20px] text-[#c9c9c9] font-extralight text-[14px] ">

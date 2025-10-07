@@ -32,6 +32,21 @@
     "type": "Choose design"
   },
   "collection": "Our Collection",
-  "collection_text":"Our Collection exudes timeless elegance and contemporary charm, offering a perfect balance of style and comfort. With its clean lines, luxurious materials, and attention to detail, this collection creates an inviting and sophisticated atmosphere in any space. Each piece is designed to deliver both functionality and aesthetic appeal, making it ideal for those who appreciate refined design and enduring quality. Whether enhancing your living room, bedroom, or dining area, our Collection transforms your home with its versatile and graceful presence, offering a blend of modern luxury and classic beauty."
-  
+  "collection_text": "Our Collection exudes timeless elegance and contemporary charm, offering a perfect balance of style and comfort. With its clean lines, luxurious materials, and attention to detail, this collection creates an inviting and sophisticated atmosphere in any space. Each piece is designed to deliver both functionality and aesthetic appeal, making it ideal for those who appreciate refined design and enduring quality. Whether enhancing your living room, bedroom, or dining area, our Collection transforms your home with its versatile and graceful presence, offering a blend of modern luxury and classic beauty.",
+  "similar": "Related Products",
+  "company": {
+    "title": "About Our Company",
+    "description": "We design and craft high-quality furniture that transforms your home into a place of comfort and elegance.",
+    "whoWe": "has grown into one of the most trusted furniture brands in the region. Our craftsmen combine modern design with traditional precision to create timeless pieces that elevate every interior.",
+    "subtitle": "Why Choose Us",
+    "design": "Modern Design",
+    "materials": "Quality Materials",
+    "skilled": "Skilled Team",
+    "brand": "Trusted Brand",
+    "design_desc": "We stay ahead of trends to deliver stylish, innovative designs.",
+    "material_desc": "We use premium woods, fabrics, and finishes for durability.",
+    "skilled_desc": "Our experienced artisans and designers bring passion to every detail.",
+    "brand_desc": "We’ve built a reputation for excellence and reliability.",
+    "whoWeAre": "Who We Are"
+  }
 }

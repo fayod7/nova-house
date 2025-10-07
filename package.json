@@ -23,6 +23,7 @@
     "react-i18next": "^16.0.0",
     "react-icons": "^5.5.0",
     "react-multi-carousel": "^2.8.6",
+    "react-photo-view": "^1.2.7",
     "react-router-dom": "^7.9.3",
     "swiper": "^12.0.2",
     "tailwindcss": "^4.1.13"
