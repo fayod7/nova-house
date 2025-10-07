@@ -76,7 +76,7 @@ const Header = () => {
                 isScroll ? "w-[50px]" : "w-[75px]"
               } transition-all duration-300 bg-transparent`}
             />
-            <span className="font-bold">Nova House</span>
+            <span className={`font-light uppercase font-serif ${isScroll ? 'text-sm' : 'text-[20px]'}`}>Nova House</span>
           </Link>
 
           <ul
