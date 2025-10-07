@@ -21,6 +21,8 @@ export const useCollections = () => {
       gcTime: 1000 * 60 * 60,
       staleTime: 1000 * 60 * 30,
     });
+  console.log(api);
+  
 
   return { getCollections, getCollectionsById };
 };

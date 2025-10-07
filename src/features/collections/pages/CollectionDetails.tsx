@@ -1,16 +1,22 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useCollections } from "../services/useCollections";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 import { useTranslation } from "react-i18next";
+import { useCategory } from "../services/useCategories";
+import CollectionsView from "../components/CollectionsView";
 
 const CollectionDetails = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const { id } = useParams();
   const { getCollectionsById } = useCollections();
   const toString = id?.toString();
+  const { getCollectionCategories } = useCategory();
   const { data, isFetching } = getCollectionsById(toString);
-  const { i18n } = useTranslation();
+  const { i18n,t } = useTranslation();
+  
   const info = data?.data;
   const lang = i18n.language;
   const title =
@@ -19,6 +25,10 @@ const CollectionDetails = () => {
       : lang === "ru"
       ? info?.description_ru
       : info?.description_en;
+
+  
+  const { data: categoryItem } = getCollectionCategories(info?.category_id);
+  console.log(categoryItem);
 
   if (isFetching) {
     return (
@@ -34,8 +44,10 @@ const CollectionDetails = () => {
         <div className="flex items-center justify-between h-[420px] max-[700px]:flex-col">
           <div className="h-[100%] w-[50%] max-[700px]:w-[100%]">
             <img
-              className="block object-cover max-h-[100%] max-w-[100%] w-[100%]"
-              src={`https://images.carwashgo.uz/collections/${info?.mainImage?.image_url}`}
+              className="block object-cover max-h-[100%] h-[100%] max-w-[100%] w-[100%]"
+              src={`${import.meta.env.VITE_API_IMAGES}${
+                info?.mainImage?.image_url
+              }`}
               alt=""
             />
           </div>
@@ -49,69 +61,30 @@ const CollectionDetails = () => {
           <p className="font-extralight text-center ">{title}</p>
         </div>
 
-        <Carousel
-          additionalTransfrom={0}
-          arrows
-          autoPlaySpeed={3000}
-          centerMode={false}
-          className=""
-          containerClass="container-with-dots"
-          dotListClass=""
-          draggable
-          focusOnSelect={false}
-          infinite
-          itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          pauseOnHover
-          renderArrowsWhenDisabled={false}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          responsive={{
-            desktop: {
-              breakpoint: {
-                max: 3000,
-                min: 1024,
-              },
-              items: 2,
-              partialVisibilityGutter: 40,
-            },
-            mobile: {
-              breakpoint: {
-                max: 464,
-                min: 0,
-              },
-              items: 1,
-              partialVisibilityGutter: 30,
-            },
-            tablet: {
-              breakpoint: {
-                max: 1024,
-                min: 464,
-              },
-              items: 2,
-              partialVisibilityGutter: 30,
-            },
-          }}
-          rewind={false}
-          rewindWithAnimation={false}
-          rtl={false}
-          shouldResetAutoplay
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-          swipeable
-        >
-          {info?.images?.map((item: any) => (
-            <div className="h-[400px] px-[5px]" key={item.id}>
-              <img
-                className="max-h-[100%] h-[100%] w-[100%] object-cover"
-                src={`https://images.carwashgo.uz/collections/${item?.image_url}`}
-                alt=""
-              />
+        <div className=" container">
+          <PhotoProvider className="">
+            <div className="foo grid grid-cols-3 gap-[14px] max-[800px]:grid-cols-2 max-[520px]:gap-[8px]">
+              {info?.images?.map((item: any) => (
+                <PhotoView
+                  key={item.id}
+                  src={`${import.meta.env.VITE_API_IMAGES}${item?.image_url}`}
+                >
+                  <img
+                    className=" w-[100%] object-cover bg-[#ddd]"
+                    src={`${import.meta.env.VITE_API_IMAGES}${item?.image_url}`}
+                    alt=""
+                  />
+                </PhotoView>
+              ))}
             </div>
-          ))}
-        </Carousel>
+          </PhotoProvider>
+          <div className="mt-[90px]">
+            <h2 className="text-center mb-[40px] text-[30px] font-extralight">
+              {t("similar")}
+            </h2>
+            <CollectionsView data={categoryItem?.data?.items} />
+          </div>
+        </div>
       </section>
     );
   }

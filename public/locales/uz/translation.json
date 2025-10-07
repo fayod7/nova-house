@@ -30,5 +30,21 @@
     "type": "Dizayn tanlang"
   },
   "collection": "Bizning to‘plamimiz",
-  "collection_text": "Bizning to‘plamimiz abadiy nafislik va zamonaviy jozibani o‘zida mujassam etib, uslub va qulaylikning mukammal uyg‘unligini taqdim etadi. Toza chiziqlar, hashamatli materiallar va mayda detallar bilan bu to‘plam har qanday joyda chiroyli va zamonaviy muhit yaratadi. Har bir buyum funksionallik va estetik go‘zallikni ta’minlash uchun ishlab chiqilgan bo‘lib, nafis dizayn va sifatni qadrlovchilar uchun ideal tanlovdir. Yashash xonangiz, yotoqxonangiz yoki ovqatlanish xonangizni boyitishidan qat’i nazar, bizning to‘plamimiz uyingizga nafislik va zamonaviylik uyg‘unligini olib kiradi hamda klassik go‘zallik bilan uyg‘unlashgan hashamatni taqdim etadi."
+  "collection_text": "Bizning to‘plamimiz abadiy nafislik va zamonaviy jozibani o‘zida mujassam etib, uslub va qulaylikning mukammal uyg‘unligini taqdim etadi. Toza chiziqlar, hashamatli materiallar va mayda detallar bilan bu to‘plam har qanday joyda chiroyli va zamonaviy muhit yaratadi. Har bir buyum funksionallik va estetik go‘zallikni ta’minlash uchun ishlab chiqilgan bo‘lib, nafis dizayn va sifatni qadrlovchilar uchun ideal tanlovdir. Yashash xonangiz, yotoqxonangiz yoki ovqatlanish xonangizni boyitishidan qat’i nazar, bizning to‘plamimiz uyingizga nafislik va zamonaviylik uyg‘unligini olib kiradi hamda klassik go‘zallik bilan uyg‘unlashgan hashamatni taqdim etadi.",
+  "similar": "O‘xshash mahsulotlar",
+  "company": {
+    "title": "Kompaniyamiz haqida",
+    "description": "Biz yuqori sifatli mebellarni loyihalashtirib, yasaymiz — uyingizni qulaylik va nafislik maskaniga aylantiramiz.",
+    "whoWe": "mintaqadagi eng ishonchli mebel brendlaridan biriga aylandi. Ustalarimiz zamonaviy dizaynni an’anaviy aniqlik bilan uyg‘unlashtirib, har qanday interyerni boyituvchi asarlar yaratishadi.",
+    "subtitle": "Nega bizni tanlashadi",
+    "design": "Zamonaviy dizayn",
+    "materials": "Sifatli materiallar",
+    "skilled": "Malakali jamoa",
+    "brand": "Ishonchli brend",
+    "design_desc": "Biz trendlardan oldindamiz va nafis, innovatsion dizaynlar yaratamiz.",
+    "material_desc": "Biz mustahkam va uzoq xizmat qiluvchi yuqori sifatli yog‘och, mato va qoplamalardan foydalanamiz.",
+    "skilled_desc": "Tajribali ustalarimiz va dizaynerlarimiz har bir detaldan ilhomlanib ishlashadi.",
+    "brand_desc": "Biz sifat va ishonchlilik bilan tanilgan brendmiz.",
+    "whoWeAre": "Biz haqimizda"
+  }
 }
