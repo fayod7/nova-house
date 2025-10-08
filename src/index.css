@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-.container{
+.container {
   max-width: 1340px;
   width: 100%;
   margin-right: auto;
@@ -9,12 +9,12 @@
   padding-right: 12px;
 }
 .animation {
-  background-color: #e2e8f0; 
+  background-color: #e2e8f0;
   background: linear-gradient(
     to right,
-    #f6f7f8 0%,  
-    #edeef1 20%, 
-    #f6f7f8 40%, 
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
     #f6f7f8 100%
   );
   background-size: 200% 100%;
@@ -30,6 +30,9 @@
   }
 }
 
-.header__link.active{
+.header__link.active {
   color: white;
+}
+.react-multiple-carousel__arrow {
+  z-index: 5 !important;
 }

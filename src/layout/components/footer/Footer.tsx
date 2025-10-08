@@ -21,7 +21,7 @@ const Footer = () => {
     setClean("");
   };
   return (
-    <footer className="bg-[#1e1e1e] pb-50px">
+    <footer className="bg-[#1e1e1e] pb-50px relative bottom-0 w-full ">
       <div
         className="container grid grid-cols-3 gap-[20px] max-[1060px]:grid-cols-2 
       max-[600px]:grid-cols-1"
