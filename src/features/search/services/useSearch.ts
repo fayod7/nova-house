@@ -5,11 +5,11 @@ import i18n from "../../../../i18n";
 interface IParams {
     query: string;
 }
-const lang = i18n.language
 
 const useSearchKey:string = 'useSearchKey'
 
 export const useSearch = () => {
+    const lang = i18n.language
 
     const getCollectionsBySearch = (params: IParams) => useQuery({
         queryKey: [useSearchKey, params, lang],
