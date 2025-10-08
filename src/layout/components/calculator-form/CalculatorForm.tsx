@@ -20,6 +20,7 @@ const CalculatorForm:FC<Props> = ({ isShown, setIsShown }) => {
         const res = Number(value)
         setCalc(calculateValue(res, isFirstTime))
         localStorage.setItem('isFirstTimeUser', 'false');
+        setValue('')
     }
   const calculateValue = (value: number, isFirstTime: boolean) => {
      return isFirstTime ? value * 12 : value * 15;
