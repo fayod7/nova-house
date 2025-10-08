@@ -46,5 +46,26 @@
     "skilled_desc": "Tajribali ustalarimiz va dizaynerlarimiz har bir detaldan ilhomlanib ishlashadi.",
     "brand_desc": "Biz sifat va ishonchlilik bilan tanilgan brendmiz.",
     "whoWeAre": "Biz haqimizda"
+  },
+  "reusable": {
+    "collections" : "Kollektsiyalar",
+    "team": "Jamoa"
+  },
+  "about": {
+    "top": {
+      "title": "Bizning badiiy yo‘limiz",
+      "subtitle": "Dizaynlarimiz ortidagi ishtiyoq, qarash va mahoratni ochib beramiz"
+    },
+    "mid": {
+      "title": "Orzular dizayni: bizning hikoyamiz",
+      "desc": "Architronixda dizayn — bu bizning tuvalimiz, makon esa asarimizdir. Nafislik, funksionallik va innovatsiyaga intilgan jamoamiz turli xil joylarda betakror loyihalar yaratadi. Shahardagi zamonaviy kvartiralardan tortib, qishloqdagi hovlilargacha — biz hayotni va sayyorani boyituvchi barqaror dizayn tamoyillariga amal qilamiz.",
+      "detail": "Har bir xona ijodiylik uchun tuval bo‘lgan bu safarda bizga qo‘shiling. Birgalikda sizning orzuingizni, bosqichma-bosqich, reallikka aylantiraylik."
+    },
+    "ulCollection": {
+      "years": "Yillik tajriba",
+      "projects": "Bajarilgan loyihalar",
+      "covered": "Qamrab olingan kvadrat metrlar",
+      "feedbacks": "Ijobiy fikrlar"
+    }
   }
 }

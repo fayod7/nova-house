@@ -12,11 +12,11 @@ const MainLayout = () => {
     <> 
     {/* <Subheader/> */}
         <Header/>
-      <main className=''>
+      <main>
         <Outlet/>
       </main>
       <Calculator setIsShown={setIsShown}/>
-      <CalculatorForm isShown={isShown}/>
+      <CalculatorForm setIsShown={setIsShown} isShown={isShown}/>
       <Footer/>
     </>
   );
