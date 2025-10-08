@@ -69,5 +69,12 @@
       "covered": "Square feet Covered",
       "feedbacks": "Positive Feedbacks"
     }
-  }
+  },
+    "calc": {
+      "calculatePer": "Calculation per square meter",
+      "write": "Write in square metres",
+      "checkbox": "First-time user",
+      "total": "Your total is",
+      "placeholder": "Insert a number to calculate"
+    }
 }

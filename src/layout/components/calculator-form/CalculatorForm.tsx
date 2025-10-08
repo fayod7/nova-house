@@ -1,5 +1,6 @@
 import { X } from 'lucide-react';
 import { memo, useEffect, useState, type Dispatch, type FC, type FormEvent, type SetStateAction } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
     isShown: boolean;
@@ -46,6 +47,7 @@ const CalculatorForm:FC<Props> = ({ isShown, setIsShown }) => {
     setCalc(calculateValue(res, isFirstTime));
   }
 }, [value, isFirstTime]);
+  const {t} = useTranslation()
   return (
 <>
   
@@ -58,17 +60,17 @@ const CalculatorForm:FC<Props> = ({ isShown, setIsShown }) => {
     }`}
   > 
   <div className='flex items-center justify-between'>
-    <h2 className='text-lg font-medium'>Calculation per square meter</h2>
+    <h2 className='text-lg font-medium'>{t("calc.calculatePer")}</h2>
     <X className='cursor-pointer' onClick={() => setIsShown(false)}/>
   </div>
   <div className='flex flex-col gap-[5px]'>
-    <label htmlFor="inputNum">Write in square metres:</label>
+    <label htmlFor="inputNum">{t("calc.write")}:</label>
     <input
     value={value}
     onChange={(e) => setValue(e.target.value)}
      id='inputNum' 
     type="number" 
-    className="py-[8px] indent-3 w-full focus:border-blue-500 border-[1px] border-slate-300 outline-none shadow-md text-[18px] rounded-[5px] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" placeholder="Insert a number to calculate" />
+    className="py-[8px] indent-3 w-full focus:border-blue-500 border-[1px] border-slate-300 outline-none shadow-md text-[18px] rounded-[5px] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" placeholder={t("calc.placeholder")} />
   </div>
        <div className="flex items-center gap-2">
           <input
@@ -85,12 +87,12 @@ const CalculatorForm:FC<Props> = ({ isShown, setIsShown }) => {
     }}
             }
           />
-          <label htmlFor="firstTime">First-time user?</label>
+          <label htmlFor="firstTime">{t("calc.checkbox")}?</label>
         </div>
 
  {calc !== null && typeof calc === 'number' && (
   <p className='text-[20px]'>
-    Your total is: <strong className='text-green-800'>{calc}$</strong>
+    {t("calc.total")}: <strong className='text-green-800'>{calc}$</strong>
   </p>
 )}
 
