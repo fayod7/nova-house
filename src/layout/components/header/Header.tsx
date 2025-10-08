@@ -44,7 +44,7 @@ const Header = () => {
         className={`w-full text-[#c9c9c9] z-[99] transition-all duration-300
         ${
           isScroll
-            ? "fixed top-0 bg-[#1e1e1e] shadow-lg"
+            ? "fixed top-0 bg-[#1e1e1e]"
             : "sticky top-[36px] bg-[#000000bf]"
         }`}
       >
