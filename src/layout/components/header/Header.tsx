@@ -24,7 +24,7 @@ const Header = () => {
     <>
       <div
         className={`w-full fixed top-0 left-0 z-100 text-white bg-[#000]  py-2 duration-100 ${
-          isScroll ? "  translate-y-[-36px]" : " translate-y-[0]"
+          isScroll ? "  translate-y-[-36px]" : " translate-y-[0px]"
         }`}
       >
         <div className="container flex items-center justify-between">
