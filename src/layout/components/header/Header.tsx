@@ -19,7 +19,6 @@ const Header = () => {
 
   return (
     <>
-      {/* --- Language Bar --- */}
       <div
         className={`w-full sticky top-0 left-0 z-[100] text-white bg-[#000] py-2 transition-transform duration-200 ${
           isScroll ? "translate-y-[-36px]" : "translate-y-0"

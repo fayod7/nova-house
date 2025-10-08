@@ -1,3 +1,4 @@
+import { X } from 'lucide-react';
 import { memo, useEffect, useState, type Dispatch, type FC, type FormEvent, type SetStateAction } from 'react';
 
 interface Props {
@@ -15,8 +16,20 @@ const CalculatorForm:FC<Props> = ({ isShown, setIsShown }) => {
       setIsFirstTime(false);
     }
   }, []);
+  useEffect(() => {
+  if (value) {
+    const res = Number(value);
+    setCalc(calculateValue(res, isFirstTime));
+  }
+}, [value, isFirstTime]);
+
     const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+
+        if (!value.trim()) {
+    setCalc(null); 
+    return;
+  }
         const res = Number(value)
         setCalc(calculateValue(res, isFirstTime))
         localStorage.setItem('isFirstTimeUser', 'false');
@@ -25,6 +38,14 @@ const CalculatorForm:FC<Props> = ({ isShown, setIsShown }) => {
   const calculateValue = (value: number, isFirstTime: boolean) => {
      return isFirstTime ? value * 12 : value * 15;
   }
+  useEffect(() => {
+  if (!value) {
+    setCalc(null);
+  } else {
+    const res = Number(value);
+    setCalc(calculateValue(res, isFirstTime));
+  }
+}, [value, isFirstTime]);
   return (
 <>
   
@@ -36,7 +57,10 @@ const CalculatorForm:FC<Props> = ({ isShown, setIsShown }) => {
         : '-top-[400px] opacity-0'
     }`}
   > 
-  <h2 className='text-lg font-medium'>Calculation per square meter</h2>
+  <div className='flex items-center justify-between'>
+    <h2 className='text-lg font-medium'>Calculation per square meter</h2>
+    <X className='cursor-pointer' onClick={() => setIsShown(false)}/>
+  </div>
   <div className='flex flex-col gap-[5px]'>
     <label htmlFor="inputNum">Write in square metres:</label>
     <input
@@ -51,19 +75,25 @@ const CalculatorForm:FC<Props> = ({ isShown, setIsShown }) => {
             id="firstTime"
             type="checkbox"
             checked={isFirstTime}
-            onChange={(e) => setIsFirstTime(e.target.checked)}
+            onChange={(e) => 
+               {
+    const checked = e.target.checked;
+    setIsFirstTime(checked);
+    if (value) {
+      const res = Number(value);
+      setCalc(calculateValue(res, checked));
+    }}
+            }
           />
           <label htmlFor="firstTime">First-time user?</label>
         </div>
-    
- <div>
-   <button className='px-6 py-2.5 border'>submit</button>
- </div>
 
- {
-  calc && typeof calc == 'number' && 
-  <p className='text-[20px]'>Your total is <strong>{calc ? calc : calc.toString()}</strong>$</p>
- }
+ {calc !== null && typeof calc === 'number' && (
+  <p className='text-[20px]'>
+    Your total is: <strong className='text-green-800'>{calc}$</strong>
+  </p>
+)}
+
   </form>
      {isShown && (
   <div
