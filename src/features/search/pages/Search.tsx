@@ -14,7 +14,7 @@ const Search = () => {
     }
      
   return (
-    <div className='bg-white pb-[170px] flex-col flex gap-6'>
+    <div className='bg-white min-h-[600px] flex-col flex gap-6'>
       <input
       value={value}
       onChange={(e) => setValue(e.target.value)}
