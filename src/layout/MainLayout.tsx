@@ -12,7 +12,7 @@ const MainLayout = () => {
     <> 
     {/* <Subheader/> */}
         <Header/>
-      <main>
+      <main className=''>
         <Outlet/>
       </main>
       <Calculator setIsShown={setIsShown}/>
