@@ -30,7 +30,7 @@ const CollectionDetails = () => {
   const { data: categoryItem } = getCollectionCategories(info?.category_id);
   console.log(categoryItem);
 
-  if (!isFetching) {
+  if (isFetching) {
     return (
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6">
         {[...Array(4)].map((_, i) => (
