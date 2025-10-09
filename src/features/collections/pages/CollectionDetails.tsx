@@ -30,12 +30,20 @@ const CollectionDetails = () => {
   const { data: categoryItem } = getCollectionCategories(info?.category_id);
   console.log(categoryItem);
 
-  if (isFetching) {
+  if (!isFetching) {
     return (
-      <section>
-        <div>
-          <p>loading</p>
-        </div>
+      <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6">
+        {[...Array(4)].map((_, i) => (
+          <div
+            key={i}
+            className="bg-white rounded-2xl shadow-sm p-4 flex flex-col gap-4 overflow-hidden relative"
+          >
+            <div className="h-[500px] bg-gray-200 rounded-xl relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-100 to-transparent animate-shimmer" />
+            </div>
+           
+          </div>
+        ))}
       </section>
     );
   } else {
