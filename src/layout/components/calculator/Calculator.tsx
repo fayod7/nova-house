@@ -20,7 +20,7 @@ const Calculator:FC<Props> = ({ setIsShown }) => {
   }, []);
   return (
     <div>
-      <button onClick={() => setIsShown(prev => !prev)} className={`size-10 border bg-white border-slate-700 rounded-full grid place-items-center fixed top-[90%] duration-300 ${isScroll ? 'right-[50px]': '-right-[50px]'}`}>
+      <button onClick={() => setIsShown(prev => !prev)} className={`size-10 border bg-white calculator border-slate-700 rounded-full grid place-items-center fixed top-[90%] duration-300 ${isScroll ? 'right-[50px]': '-right-[50px]'}`}>
           <CalculatorIcon/>
         </button>
     </div>

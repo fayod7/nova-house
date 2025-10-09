@@ -21,7 +21,7 @@ const TeamComp:FC<Props> = ({data}) => {
       {
         data?.map((user:IMember) => (
              <div className="bg-white duration-300 relative">
-      <div className="h-[400px] w-full overflow-hidden">
+      <div className="h-[400px] w-full overflow-hidden max-[571px]:h-[300px]">
         <img
           src={`${import.meta.env.VITE_API_IMAGES}${user.image_url}`}
           alt={user.id.toString()}
@@ -31,7 +31,7 @@ const TeamComp:FC<Props> = ({data}) => {
 
        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
-      <div className="absolute -bottom-8 left-0 w-[85%] z-20 text-center px-3 bg-gray-500">
+      <div className="absolute -bottom-8 left-0 w-[85%] z-20 text-center px-3 bg-gray-500 max-[750px]:bottom-0 max-[750px]:w-full">
         <h3 className="text-white font-semibold text-lg">{user.full_name}</h3>
         <p className="text-gray-200 text-sm">{user.position}</p>
       </div>

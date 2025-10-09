@@ -7,8 +7,10 @@ import CollectionsView from "../components/CollectionsView";
 import CollectionsViewEmpty from "../components/CollectionsViewEmpty";
 import CollectionsViewSkeleton from "../components/CollectionsViewSkeleton";
 import ReusableDropdown from "../../../layout/components/reuseable-dropdown/ReusableDropdown";
+import { useTranslation } from "react-i18next";
 
 const Collections = () => {
+  const {t} = useTranslation()
   const [params, setParams] = useSearchParams();
   const { getCategories, getCollectionCategories } = useCategory();
   const { getCollections } = useCollections();
@@ -61,9 +63,9 @@ const exteriorCategories = categories
 
   return (
     <>
-      <ReusableComp title="Collections" />
+      <ReusableComp title={t("reusable.collections")} />
       <div className="py-16">
-        <h2 className="text-3xl text-center">Collections</h2>
+        <h2 className="text-3xl text-center">{t("reusable.collections")}</h2>
 
         <div className="flex gap-10 items-center justify-center mt-5">
           <ReusableDropdown

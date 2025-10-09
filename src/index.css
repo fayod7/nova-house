@@ -36,3 +36,7 @@
 .react-multiple-carousel__arrow {
   z-index: 5 !important;
 }
+.calculator,
+.telegram{
+  z-index: 1200;
+}

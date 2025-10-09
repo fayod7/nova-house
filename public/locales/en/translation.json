@@ -48,5 +48,33 @@
     "skilled_desc": "Our experienced artisans and designers bring passion to every detail.",
     "brand_desc": "We’ve built a reputation for excellence and reliability.",
     "whoWeAre": "Who We Are"
-  }
+  },
+  "reusable": {
+    "collections" : "Collections",
+    "team": "Team"
+  },
+  "about": {
+    "top": {
+      "title" : "Our Artistic Journey",
+      "subtitle": "Unveiling the Passion, Vision, and Expertise Behind Our Designs"
+    },
+    "mid": {
+      "title": "Designing Dreams: Our Story",
+      "desc": "At Architronix, design is our canvas, and spaces are our masterpieces. With a vision for elegance, functionality, and innovation, our diverse team curates exceptional spaces and dreams. From cosmopolitan apartments to countryside estates, we're committed to sustainable design practices that enrich lives and the planet.",
+      "detail": "Join us on a journey where every room is a canvas for creativity, and design transcends the ordinary. Together, let's craft your vision, one design at a time."
+    },
+    "ulCollection": {
+      "years": "Years of experience",
+      "projects": "Projects Completed",
+      "covered": "Square feet Covered",
+      "feedbacks": "Positive Feedbacks"
+    }
+  },
+    "calc": {
+      "calculatePer": "Calculation per square meter",
+      "write": "Write in square metres",
+      "checkbox": "First-time user",
+      "total": "Your total is",
+      "placeholder": "Insert a number to calculate"
+    }
 }
