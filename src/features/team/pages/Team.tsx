@@ -6,7 +6,7 @@ const Team = () => {
   const { getTeamMembers } = useTeam()
   const { data } = getTeamMembers()  
   return (
-    <section className='w-full py-[60px] flex flex-col gap-5'>
+    <section className='w-full bg-[#f4f5f5] py-[60px] flex flex-col gap-5'>
       <div className='container'>
         <h2 className='text-3xl/[1.4] font-semibold'>Meet the Minds Behind Nova House</h2>
       <p className='w-[400px] text-lg/[1.2] text-gray-600 font-medium'>

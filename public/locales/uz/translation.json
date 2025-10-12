@@ -75,5 +75,19 @@
     "total": "Umumiy summa:",
     "placeholder": "Hisoblash uchun raqam kiriting"
   },
-  "locationTitle": "Manzilimiz"
+  "locationTitle": "Manzilimiz",
+  "contactComp": {
+      "title": "Biz mahsulot va xizmatlarimizni yetkazib berishda bo‘lgani kabi, sotuvdan keyingi xizmatlarimizda ham sifat va tafsilotlarga e’tibor borasida bir xil sadoqatni saqlaymiz.",
+      "subtitle": "Biz sizga kerak bo‘lgan har qanday paytda yoningizdamiz, ishonchliligimiz va mijozlar mamnuniyatiga sodiqligimizdan hech qachon chekinmaymiz!",
+      "desc": "Aloqa shakli",
+      "subdesc": "Savollaringizga javob berish uchun, iltimos, aloqa shaklini to‘ldirib biz bilan bog‘laning.",
+      "submit": "Yuborish",
+      "select": {
+      "selectType": "Turini tanlang",
+      "exterior": "Tashqi ko‘rinish",
+      "interior": "Ichki ko‘rinish",
+      "both": "Tashqi va ichki ko‘rinish"
+}
+
+    } 
 }

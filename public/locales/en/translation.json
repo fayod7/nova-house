@@ -77,6 +77,18 @@
       "total": "Your total is",
       "placeholder": "Insert a number to calculate"
     },
-    "locationTitle":"Our Location"
-
+    "locationTitle":"Our Location",
+    "contactComp": {
+      "title": "We maintain the same dedication to quality and attention to detail in our after-sales services as we do in delivering our products and services.",
+      "subtitle": "We stand by your side whenever you need us, never compromising on our reliability and commitment to customer satisfaction!",
+       "desc": "Contact Form",
+      "subdesc": "To answer your questions, please contact us by filling out the contact form.",
+      "submit": "submit",
+       "select": {
+        "selectType": "Select Type",
+        "exterior": "Exterior",
+        "interior": "Interior",
+        "both": "Both Exterior & Interior"
+      }
+    } 
 }
