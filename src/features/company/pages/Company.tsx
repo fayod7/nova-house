@@ -2,7 +2,6 @@ import { memo, useEffect } from "react";
 import { CheckCircle, Users, Building2, Award } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import.meta.env.VITE_API_BASE_URL;
 const Company = () => {
   const { t } = useTranslation();
   useEffect(() => {
@@ -74,12 +73,18 @@ const Company = () => {
           </div>
         </div>
       </div>
-      <div className="container ">
-        <iframe
-          className="w-full h-[450px] border-0 rounded-2xl my-20"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.1234567890123!2d69.29600000000000!3d41.38311400000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef32709e6c6bb%3A0x1c14ce22472b80b3!2sYunusobad+Medical+Center!5e0!3m2!1sen!2suz!4v1620000000000!5m2!1sen!2suz"
-          loading="lazy"
-        ></iframe>
+      <h2 className="mt-[50px] text-center text-[28px]">{ t("locationTitle")}</h2>
+      <div className="container flex items-center justify-center">
+        <div className="w-[80%] max-[570px]:w-full border-[1.5px] border-[#eee] my-[40px] rounded-[22px] shadow-lg overflow-hidden shadow-[#ddd]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.535401163661!2d69.209696!3d41.3331479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDEuMzMzMTQ3OSwgNjkuMjA5Njk2!5e0!3m2!1sen!2s!4v1697049946943!5m2!1sen!2s"
+            width="100%"
+            height="420"
+            className=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </section>
   );

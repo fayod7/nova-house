@@ -76,5 +76,7 @@
       "checkbox": "First-time user",
       "total": "Your total is",
       "placeholder": "Insert a number to calculate"
-    }
+    },
+    "locationTitle":"Our Location"
+
 }

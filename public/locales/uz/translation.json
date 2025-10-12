@@ -48,7 +48,7 @@
     "whoWeAre": "Biz haqimizda"
   },
   "reusable": {
-    "collections" : "Kollektsiyalar",
+    "collections": "Kollektsiyalar",
     "team": "Jamoa"
   },
   "about": {
@@ -68,11 +68,12 @@
       "feedbacks": "Ijobiy fikrlar"
     }
   },
-    "calc": {
-  "calculatePer": "Kvadrat metr uchun hisoblash",
-  "write": "Kvadrat metr miqdorini kiriting",
-  "checkbox": "Xizmatdan birinchi marta foydalanyapsizmi?",
-  "total": "Umumiy summa:",
-  "placeholder":"Hisoblash uchun raqam kiriting"
-}
+  "calc": {
+    "calculatePer": "Kvadrat metr uchun hisoblash",
+    "write": "Kvadrat metr miqdorini kiriting",
+    "checkbox": "Xizmatdan birinchi marta foydalanyapsizmi?",
+    "total": "Umumiy summa:",
+    "placeholder": "Hisoblash uchun raqam kiriting"
+  },
+  "locationTitle": "Manzilimiz"
 }
