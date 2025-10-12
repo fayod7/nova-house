@@ -19,11 +19,23 @@ const Calculator:FC<Props> = ({ setIsShown }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div>
-      <button onClick={() => setIsShown(prev => !prev)} className={`size-10 border bg-white calculator border-slate-700 rounded-full grid place-items-center fixed top-[90%] duration-300 ${isScroll ? 'right-[50px]': '-right-[50px]'}`}>
-          <CalculatorIcon/>
-        </button>
-    </div>
+   <button
+      onClick={() => setIsShown((prev) => !prev)}
+      className={`group z-auto size-12 cursor-pointer transition-all duration-300
+                  border bg-white border-slate-700 rounded-full grid place-items-center 
+                  fixed top-[91%] ${isScroll ? "right-[50px]" : "-right-[50px]"} 
+                  shadow-md hover:shadow-lg`}
+    >
+      <CalculatorIcon className="text-slate-800 size-7.5 transition-transform duration-300"/>
+      <span
+        className="absolute right-14 top-1/2 -translate-y-1/2 px-2 py-1 
+                   bg-slate-800 text-white text-xs rounded-md opacity-0 
+                   group-hover:opacity-100 group-hover:translate-x-0 
+                   translate-x-2 transition-all duration-300 pointer-events-none"
+      >
+        Calculator
+      </span>
+    </button>
   );
 };
 

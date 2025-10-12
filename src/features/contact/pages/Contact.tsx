@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import ReusableComp from '../../../layout/components/reusable-comp/ReusableComp';
 import ContactsForm from '../components/ContactsForm';
 import { useTranslation } from 'react-i18next';
@@ -6,6 +6,13 @@ import { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
   const {t} = useTranslation()
+  useEffect(() => {
+   window.scrollTo({
+     top: 0,
+     left: 0,
+     behavior: "smooth",
+   });
+ }, []);
   return (
     <div>
       <ReusableComp title='Contact' />

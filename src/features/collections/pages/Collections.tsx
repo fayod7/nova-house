@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import ReusableComp from "../../../layout/components/reusable-comp/ReusableComp";
 import { useCategory } from "../services/useCategories";
@@ -15,6 +15,13 @@ const Collections = () => {
   const { getCategories, getCollectionCategories } = useCategory();
   const { getCollections } = useCollections();
   console.log(params);
+  useEffect(() => {
+   window.scrollTo({
+     top: 0,
+     left: 0,
+     behavior: "smooth",
+   });
+ }, []);
   
 
   const [selectedInteriorId, setSelectedInteriorId] = useState<number | null>(null);

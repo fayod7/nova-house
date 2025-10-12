@@ -1,10 +1,17 @@
-import { memo, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import CollectionsView from '../../collections/components/CollectionsView';
 import { useSearch } from '../services/useSearch';
 import useDebounce from '../../../shared/hooks/useDebounce';
 import CollectionsViewSkeleton from '../../collections/components/CollectionsViewSkeleton';
 
 const Search = () => {
+  useEffect(() => {
+   window.scrollTo({
+     top: 0,
+     left: 0,
+     behavior: "smooth",
+   });
+ }, []);
   const [value, setValue] = useState<string>('')
      const { getCollectionsBySearch } = useSearch()
      const debouncedValue = useDebounce(value)
