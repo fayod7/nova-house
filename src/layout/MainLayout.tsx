@@ -12,7 +12,7 @@ const MainLayout = () => {
     <> 
     {/* <Subheader/> */}
         <Header/>
-      <main>
+      <main className='min-h-[500px]'>
         <Outlet/>
       </main>
       <Calculator setIsShown={setIsShown}/>
