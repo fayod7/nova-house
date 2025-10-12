@@ -89,6 +89,8 @@
         "exterior": "Exterior",
         "interior": "Interior",
         "both": "Both Exterior & Interior"
-      }
+      },
+      "successMsg": "Message sent successfully",
+      "errorMsg": "Something went wrong"
     } 
 }

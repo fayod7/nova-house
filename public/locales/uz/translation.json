@@ -87,7 +87,10 @@
       "exterior": "Tashqi ko‘rinish",
       "interior": "Ichki ko‘rinish",
       "both": "Tashqi va ichki ko‘rinish"
-}
+},
+    "successMsg": "Xabar muvaffaqiyatli yuborildi",
+    "errorMsg": "Nimadir xato ketdi"
+
 
     } 
 }
