@@ -47,9 +47,9 @@ Type: <b>${msg.type}</b>
  handleReset()
     }
     const typeOptions = [
-    { label: "Exterior", value: "exterior" },
-    { label: "Interior", value: "interior" },
-    { label: "Both Exterior & Interior", value: "both" },
+    { label: t("contactComp.select.exterior"), value: "exterior" },
+    { label: t("contactComp.select.interior"), value: "interior" },
+    { label: t("contactComp.select.both"), value: "both" },
   ];
   return (
     <section className='py-[50px] w-full'>
@@ -57,10 +57,11 @@ Type: <b>${msg.type}</b>
         <div className='flex flex-col gap-3.5 max-[650px]:pl-2.5'>
             <h3 className='uppercase text-2xl font-light'>Nova</h3>
             <h2 className='text-3xl'>
-                Contact Form
+                {t("contactComp.desc")}
             </h2>
             <p className='max-w-[300px] text-lg'>
-                To answer your questions, please contact us by filling out the contact form.
+                
+                {t("contactComp.subdesc")}
             </p>
         </div>
         <form className='bg-white p-5 rounded-[10px] shadow-md flex flex-col gap-3 w-full' onSubmit={handleSubmit}>
@@ -123,11 +124,11 @@ Type: <b>${msg.type}</b>
               options={typeOptions}
               selected={typeOptions.find((opt) => opt.value === type)?.value ?? null}
               onSelect={(value) => setType(value as string)}
-              allLabel="Select Type"
+              allLabel={t("contactComp.select.selectType")}
             />
           </div>
             <div>
-            <button className='border py-2 px-5 duration-200 hover:cursor-pointer hover:bg-black hover:text-white'>Submit</button>
+            <button className='border py-2 px-5 duration-200 hover:cursor-pointer hover:bg-black hover:text-white'>{t("contactComp.submit")}</button>
             </div>
         </form>
       </div>

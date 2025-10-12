@@ -8,8 +8,8 @@ export const useCollections = () => {
       queryKey: [collectionsKey],
       queryFn: () => api.get("collections").then((res) => res.data),
       enabled,
-      gcTime: 1000 * 60 * 60,
-      staleTime: 1000 * 60 * 30,
+      gcTime: 1000 * 60 * 5,
+      staleTime: 1000 * 60 * 2,
     });
 
   const getCollectionsById = (categoryId: string | undefined | null | number) =>
