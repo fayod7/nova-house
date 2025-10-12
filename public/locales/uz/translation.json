@@ -3,11 +3,13 @@
     "title": "Bizning yangiliklarimizga obuna bo'ling",
     "description": "NOVA © Mualliflik huquqi  {{year}} | Barcha huquqlar himoyalangan.",
     "links": {
-      "homepage": "Bosh sahifa",
+      "homepage": "Asosiy sahifa",
       "about": "Biz haqimizda",
-      "collection": "To‘plam",
+      "collection": "Kollektsiyalar",
       "contact": "Aloqa uchun",
-      "team": "Jamoa"
+      "team": "Jamoa",
+      "company": "Kompaniya"
+
     },
     "button": {
       "subscribe": "Obuna"

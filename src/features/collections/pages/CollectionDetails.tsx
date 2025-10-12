@@ -7,9 +7,7 @@ import { useCategory } from "../services/useCategories";
 import CollectionsView from "../components/CollectionsView";
 
 const CollectionDetails = () => {
-   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+   
   const { id } = useParams();
   const { getCollectionsById } = useCollections();
   const toString = id?.toString();
@@ -26,7 +24,14 @@ const CollectionDetails = () => {
       ? info?.description_ru
       : info?.description_en;
 
-  
+ useEffect(() => {
+   window.scrollTo({
+     top: 0,
+     left: 0,
+     behavior: "smooth",
+   });
+ }, [id]);
+
   const { data: categoryItem } = getCollectionCategories(info?.category_id);
   console.log(categoryItem);
 
