@@ -2,6 +2,7 @@ import { memo } from 'react';
 import ReusableComp from '../../../layout/components/reusable-comp/ReusableComp';
 import ContactsForm from '../components/ContactsForm';
 import { useTranslation } from 'react-i18next';
+import { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
   const {t} = useTranslation()
@@ -19,6 +20,7 @@ const Contact = () => {
           </div>
       </div>
       <ContactsForm/>
+      <Toaster position="top-center" />
     </div>
   );
 };

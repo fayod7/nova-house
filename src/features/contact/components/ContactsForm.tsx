@@ -2,6 +2,7 @@ import axios from 'axios';
 import { memo, useState, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReusableDropdown from '../../../layout/components/reuseable-dropdown/ReusableDropdown';
+import toast from 'react-hot-toast';
 
 
 const ContactsForm = () => {
@@ -18,7 +19,7 @@ const ContactsForm = () => {
     const [square, setSquare] = useState<string>('')
     const [address, setAddress] = useState<string>('')
     const [type, setType] =  useState<string>('')
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         const msg = {
             fullName,
@@ -28,8 +29,8 @@ const ContactsForm = () => {
             type
         }
         
-
-       axios.get(`https://api.telegram.org/bot${import.meta.env.VITE_BOT_TOKEN}/sendMessage`, {
+        try {
+               axios.get(`https://api.telegram.org/bot${import.meta.env.VITE_BOT_TOKEN}/sendMessage`, {
         params: {
         chat_id: import.meta.env.VITE_CHAT_ID,
         text: `
@@ -44,6 +45,14 @@ Type: <b>${msg.type}</b>
     parse_mode: "HTML",
   },
 });
+  toast.success(t("contactComp.successMsg"));
+      handleReset();
+        } catch (error) {
+           toast.error(t("contactComp.errorMsg"));
+        }
+
+
+  
  handleReset()
     }
     const typeOptions = [
