@@ -63,7 +63,7 @@ const Footer = () => {
           
         </div>
         <div className="pt-[50px] max-[1060px]:col-span-2 max-[600px]:col-span-1 max-[600px]:pt-[0]">
-          <ul className="flex items-center max-[1060px]:justify-center gap-[20px] text-[#c9c9c9] font-extralight text-[14px] ">
+          <ul className="flex items-center flex-wrap max-[1060px]:justify-center gap-[14px] text-[#c9c9c9] font-extralight text-[14px] ">
             <li>
               <NavLink className={"link"} to={"/"}>
                 {t("footer.links.homepage")}
@@ -82,6 +82,11 @@ const Footer = () => {
             <li>
               <NavLink className={"link"} to={"/about"}>
                 {t("footer.links.about")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className={"link"} to={"/company"}>
+                {t("footer.links.company")}
               </NavLink>
             </li>
             <li>

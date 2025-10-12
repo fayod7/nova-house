@@ -3,15 +3,16 @@ import { Link, NavLink } from "react-router-dom";
 import { Menu, Search, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logo from "../../../shared/assets/nova-logo.png";
+import LanguageSelect from "./LanguageSelect";
 
 const Header = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isScroll, setIsScroll] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScroll(window.scrollY > 20);
+      setIsScroll(window.scrollY > 0);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -19,35 +20,15 @@ const Header = () => {
 
   return (
     <>
-      <div
-        className={`w-full sticky top-0 left-0 z-[100] text-white bg-[#000] py-2 transition-transform duration-200 ${
-          isScroll ? "translate-y-[-36px]" : "translate-y-0"
-        }`}
-      >
-        <div className="container flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            {["uz", "en", "ru"].map((lng) => (
-              <button
-                key={lng}
-                onClick={() => i18n.changeLanguage(lng)}
-                className="font-semibold cursor-pointer uppercase"
-              >
-                {lng}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
       <header
-        className={`w-full text-[#c9c9c9] z-[99] transition-all duration-300
-        ${
-          isScroll
-            ? "fixed top-0 bg-[#1e1e1e]"
-            : "sticky top-[36px] bg-[#000000bf]"
-        }`}
+        className={`w-full sticky top-0 shadow-lg  text-[#c9c9c9] z-[99] transition-all duration-300
+        ${isScroll ? "  bg-[#1e1e1e]" : "  bg-[#292929]"}`}
       >
-        <nav className="container flex items-center justify-between py-2">
+        <nav
+          className={`container flex items-center justify-between relative duration-150  ${
+            isScroll ? "min-h-[70px]" : " min-h-[80px]"
+          }`}
+        >
           <ul
             className={`hidden md:flex gap-4 items-center transition-all duration-300 ${
               isScroll ? "text-sm" : "text-[16px]"
@@ -68,38 +49,37 @@ const Header = () => {
                 {t("header.team")}
               </NavLink>
             </li>
-          </ul>
-
-          <Link
-            to="/"
-            className="transition-all duration-300 flex flex-col items-center text-[#c9c9c9]"
-          >
-            <img
-              src={logo}
-              alt="Nova House logo"
-              className={`transition-all duration-300 ${
-                isScroll ? "w-[50px]" : "w-[75px]"
-              }`}
-            />
-            <span
-              className={`font-light uppercase font-serif transition-all duration-300 ${
-                isScroll ? "text-sm" : "text-[20px]"
-              }`}
-            >
-              Nova House
-            </span>
-          </Link>
-
-          <ul
-            className={`hidden md:flex gap-4 items-center transition-all duration-300 ${
-              isScroll ? "text-sm" : "text-[16px]"
-            }`}
-          >
             <li>
               <NavLink className="header__link" to="/about">
                 {t("header.about")}
               </NavLink>
             </li>
+          </ul>
+
+          <Link
+            to="/"
+            className="transition-all  absolute  left-[50%] translate-x-[-50%]    duration-300 flex flex-col items-center text-[#c9c9c9]"
+          >
+            <img
+              src={logo}
+              alt="Nova House logo"
+              className={`mx-auto transition-all duration-300 ${
+                isScroll ? "w-[55px]" : "w-[60px]"
+              }`}
+            />
+            <span
+              className={`font-light uppercase font-serif transition-all duration-300 ${
+                isScroll ? "text-[16]" : "text-[16px]"
+              }`}
+            >
+              Nova House
+            </span>
+          </Link>
+          <ul
+            className={`hidden md:flex gap-4 items-center transition-all duration-300 ${
+              isScroll ? "text-sm" : "text-[16px]"
+            }`}
+          >
             <li>
               <NavLink className="header__link" to="/company">
                 {t("header.company")}
@@ -111,6 +91,9 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
+              <LanguageSelect />
+            </li>
+            <li>
               <NavLink to="/search">
                 <Search
                   className={`transition-all duration-300 ${
@@ -120,13 +103,21 @@ const Header = () => {
               </NavLink>
             </li>
           </ul>
-
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsOpen((prev) => !prev)}
-          >
-            {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-          </button>
+          <div className="md:hidden">
+            <LanguageSelect />
+          </div>
+        
+            <button
+              className="md:hidden p-2"
+              onClick={() => setIsOpen((prev) => !prev)}
+            >
+              {isOpen ? (
+                <X className="w-7 h-7" />
+              ) : (
+                <Menu className="w-7 h-7" />
+              )}
+            </button>
+          
         </nav>
       </header>
 
