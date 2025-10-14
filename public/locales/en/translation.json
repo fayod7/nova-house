@@ -52,7 +52,9 @@
   },
   "reusable": {
     "collections" : "Collections",
-    "team": "Team"
+    "team": "Team",
+    "contact": "Contact us",
+    "about": "About"
   },
   "about": {
     "top": {

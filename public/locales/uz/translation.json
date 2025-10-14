@@ -51,7 +51,9 @@
   },
   "reusable": {
     "collections": "Kollektsiyalar",
-    "team": "Jamoa"
+    "team": "Jamoa",
+    "contact": "Aloqa uchun",
+    "about": "Biz haqimizda"
   },
   "about": {
     "top": {

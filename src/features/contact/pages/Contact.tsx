@@ -24,7 +24,7 @@ const Contact = () => {
   };
   return (
     <div>
-      <ReusableComp title='Contact' />
+      <ReusableComp title={t("reusable.contact")} />
       <div className='bg-[#f5f5f5] w-full py-[100px]'>
           <div className='container flex flex-col gap-2 justify-center items-center'>
             <h2>
