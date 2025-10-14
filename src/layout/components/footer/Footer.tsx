@@ -3,8 +3,7 @@ import { useTranslation } from "react-i18next";
 import logo from "../../../shared/assets/nova-logo.svg";
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
-import { Facebook, Instagram } from "lucide-react";
-import { FaPinterestP } from "react-icons/fa";
+
 
 const Footer = () => {
   const [clean, setClean] = useState<string>("");
@@ -112,11 +111,7 @@ const Footer = () => {
           >
             +998 99 988 90 90
           </a>
-          <div className="text-[#c9c9c9] flex items-center justify-end mt-[20px] gap-[14px] max-[1060px]:justify-center max-[1060px]:mb-[50px]">
-            <Facebook />
-            <Instagram />
-            <FaPinterestP className="text-[22px]" />
-          </div>
+          
         </div>
       </div>
     </footer>
