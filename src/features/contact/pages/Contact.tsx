@@ -1,11 +1,11 @@
-import { memo, useEffect } from 'react';
+import { memo, useEffect, useState } from 'react';
 import ReusableComp from '../../../layout/components/reusable-comp/ReusableComp';
 import ContactsForm from '../components/ContactsForm';
 import { useTranslation } from 'react-i18next';
-import { Toaster } from 'react-hot-toast';
-
+import SuccessModal from '../components/SuccessModal';
 const Contact = () => {
   const {t} = useTranslation()
+  const [showSuccess, setShowSuccess] = useState<boolean>(false)
   useEffect(() => {
    window.scrollTo({
      top: 0,
@@ -13,6 +13,15 @@ const Contact = () => {
      behavior: "smooth",
    });
  }, []);
+   useEffect(() => {
+    if (showSuccess) {
+      const timer = setTimeout(() => setShowSuccess(false), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [showSuccess]);
+  const handleSuccess = () => {
+    setShowSuccess(true);
+  };
   return (
     <div>
       <ReusableComp title='Contact' />
@@ -26,8 +35,8 @@ const Contact = () => {
           </h2>
           </div>
       </div>
-      <ContactsForm/>
-      <Toaster position="top-center" />
+      <ContactsForm  handleSuccess={handleSuccess}/>
+      {showSuccess && <SuccessModal  setShowSuccess={setShowSuccess}/>}
     </div>
   );
 };
