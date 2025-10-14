@@ -1,11 +1,13 @@
 import axios from 'axios';
-import { memo, useState, type FormEvent } from 'react';
+import { memo, useState, type FC, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReusableDropdown from '../../../layout/components/reuseable-dropdown/ReusableDropdown';
-import toast from 'react-hot-toast';
 
+interface Props {
+  handleSuccess: () => void
+}
 
-const ContactsForm = () => {
+const ContactsForm:FC<Props> = ({ handleSuccess }) => {
     const { t } = useTranslation()
     const handleReset = () => {
     setFullName("");
@@ -45,10 +47,11 @@ Type: <b>${msg.type}</b>
     parse_mode: "HTML",
   },
 });
-  toast.success(t("contactComp.successMsg"));
+  handleSuccess()
       handleReset();
         } catch (error) {
-           toast.error(t("contactComp.errorMsg"));
+           console.log(error);
+           
         }
 
 
