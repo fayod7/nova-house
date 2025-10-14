@@ -1,10 +1,12 @@
 import { memo, type FC } from "react";
-
+import { useTranslation } from "react-i18next";
 
 export interface IMember {
   id: number;
   full_name: string;
-  description: string;
+  description_uz: string;
+  description_ru: string;
+  description_en: string;
   position: string;
   phone: string;
   image_url: string;
@@ -15,7 +17,9 @@ interface Props {
 }
 
 const TeamComp: FC<Props> = ({ data }) => {
+  const { i18n } = useTranslation();
   console.log(data);
+  const lang = i18n.language;
 
   return (
     <div className="container grid grid-cols-4 gap-5 max-[990px]:grid-cols-3 max-[750px]:grid-cols-2 max-[600px]:gap-2">
@@ -35,8 +39,16 @@ const TeamComp: FC<Props> = ({ data }) => {
                    opacity-0 group-hover:opacity-100
                    z-10"
           >
-            <p className="text-gray-100 absolute top-[110%] group-hover:top-[55%] duration-300  text-lg text-center drop-shadow-md pb-10 max-[700px]:text-[14px]">
+            <p className="text-gray-100 absolute top-[110%] group-hover:top-[53%] duration-300  text-lg text-center drop-shadow-md pb-10 max-[700px]:text-[14px]">
               {user.position}
+            </p>
+
+            <p className="teamdesc px-[12px]  text-gray-200 text-[14px] absolute top-[120%] group-hover:top-[60%] duration-300   text-lg text-center drop-shadow-md pb-10 max-[700px]:text-[14px]">
+              {lang === "uz"
+                ? user.description_uz
+                : lang === "ru"
+                ? user.description_ru
+                : user.description_en}
             </p>
           </div>
           <h3 className="text-team absolute w-full bottom-1 left-[50%] translate-x-[-50%] mx-auto text-center z-20 text-white font-semibold text-[25px]/[1.0]   px-3 duration-300 group-hover:bottom-[50%] group-hover:bg-[transparent] group-hover:translate-y-[50%] max-[700px]:text-[20px]">
