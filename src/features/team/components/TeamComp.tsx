@@ -1,4 +1,4 @@
-import { memo, type FC } from 'react';
+import { memo, type FC } from "react";
 
 
 export interface IMember {
@@ -10,47 +10,40 @@ export interface IMember {
   image_url: string;
 }
 
-
-interface Props{
-    data: IMember[]
+interface Props {
+  data: IMember[];
 }
 
-const TeamComp:FC<Props> = ({data}) => {
+const TeamComp: FC<Props> = ({ data }) => {
   console.log(data);
-  
+
   return (
-    <div className='container grid grid-cols-4 gap-5 max-[990px]:grid-cols-3 max-[750px]:grid-cols-2 max-[600px]:gap-2'>
-{data?.map((user: IMember) => (
-  <div
-    key={user.id}
-    className="group relative overflow-hidden shadow-md"
-  >
-    <img
-      src={`${import.meta.env.VITE_API_IMAGES}${user.image_url}`}
-      alt={user.full_name}
-      className="w-full h-[400px] object-cover max-[571px]:h-[300px]"
-    />
-    <div
-      className="absolute bottom-0 left-0 w-full h-full
-                 bg-black/30 backdrop-blur-[2px]
-                 translate-y-full group-hover:translate-y-0
-                 transition-all duration-500 ease-out
-                 flex flex-col items-center justify-end
-                 opacity-0 group-hover:opacity-100
-                 z-10"
-    >
-      <h3 className="text-white text-2xl font-semibold mb-1 text-center drop-shadow-md">
-        {user.full_name}
-      </h3>
-      <p className="text-gray-100 text-lg text-center drop-shadow-md pb-10">
-        {user.position}
-      </p>
-    </div>
-  </div>
-))}
-
-
-
+    <div className="container grid grid-cols-4 gap-5 max-[990px]:grid-cols-3 max-[750px]:grid-cols-2 max-[600px]:gap-2">
+      {data?.map((user: IMember) => (
+        <div key={user.id} className="group relative overflow-hidden shadow-md">
+          <img
+            src={`${import.meta.env.VITE_API_IMAGES}${user.image_url}`}
+            alt={user.full_name}
+            className="w-full h-[400px] object-cover max-[571px]:h-[300px]"
+          />
+          <div
+            className="absolute bottom-0 left-0 w-full h-full
+                   bg-[#0000008d]
+                   
+                   transition-all duration-500 ease-linear
+                   flex flex-col items-center justify-end
+                   opacity-0 group-hover:opacity-100
+                   z-10"
+          >
+            <p className="text-gray-100 absolute top-[110%] group-hover:top-[55%] duration-300  text-lg text-center drop-shadow-md pb-10 max-[700px]:text-[14px]">
+              {user.position}
+            </p>
+          </div>
+          <h3 className="text-team absolute w-full bottom-1 left-[50%] translate-x-[-50%] mx-auto text-center z-20 text-white font-semibold text-[25px]/[1.0]   px-3 duration-300 group-hover:bottom-[50%] group-hover:bg-[transparent] group-hover:translate-y-[50%] max-[700px]:text-[20px]">
+            {user.full_name}
+          </h3>
+        </div>
+      ))}
     </div>
   );
 };

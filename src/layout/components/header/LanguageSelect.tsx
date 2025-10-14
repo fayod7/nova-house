@@ -26,7 +26,7 @@ const LanguageSelect = () => {
     
     <>
       <div className="relative w-[130px] text-[14px]">
-        {/* Select Box */}
+      
         <button
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
@@ -45,7 +45,7 @@ const LanguageSelect = () => {
           />
         </button>
 
-        {/* Dropdown */}
+       
         <AnimatePresence>
           {isOpen && (
             <motion.ul
