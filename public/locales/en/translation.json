@@ -93,5 +93,8 @@
       },
       "successMsg": "Message sent successfully",
       "errorMsg": "Something went wrong"
-    } 
+    } ,
+    "team-desc":"At Nova House, architecture is more than design — it’s the art of shaping spaces that inspire connection, creativity, and comfort. Our team blends visionary thinking with technical precision to craft environments where modern aesthetics meet human experience.",
+    "team-members":"Our Team Members",
+    "team-title": "Meet the Minds Behind Nova House"
 }

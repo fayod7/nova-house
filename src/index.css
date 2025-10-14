@@ -40,3 +40,6 @@
 .telegram{
   z-index: 1200;
 }
+.text-team{
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+}
