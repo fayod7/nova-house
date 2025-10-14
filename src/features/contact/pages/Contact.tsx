@@ -36,7 +36,7 @@ const Contact = () => {
           </div>
       </div>
       <ContactsForm  handleSuccess={handleSuccess}/>
-      {showSuccess && <SuccessModal  setShowSuccess={setShowSuccess}/>}
+      {showSuccess && <SuccessModal />}
     </div>
   );
 };
