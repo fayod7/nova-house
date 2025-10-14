@@ -3,11 +3,12 @@
     "title": "Bizning yangiliklarimizga obuna bo'ling",
     "description": "NOVA © Mualliflik huquqi  {{year}} | Barcha huquqlar himoyalangan.",
     "links": {
-      "homepage": "Bosh sahifa",
+      "homepage": "Asosiy sahifa",
       "about": "Biz haqimizda",
-      "collection": "To‘plam",
+      "collection": "Kollektsiyalar",
       "contact": "Aloqa uchun",
-      "team": "Jamoa"
+      "team": "Jamoa",
+      "company": "Kompaniya"
     },
     "button": {
       "subscribe": "Obuna"
@@ -77,20 +78,21 @@
   },
   "locationTitle": "Manzilimiz",
   "contactComp": {
-      "title": "Biz mahsulot va xizmatlarimizni yetkazib berishda bo‘lgani kabi, sotuvdan keyingi xizmatlarimizda ham sifat va tafsilotlarga e’tibor borasida bir xil sadoqatni saqlaymiz.",
-      "subtitle": "Biz sizga kerak bo‘lgan har qanday paytda yoningizdamiz, ishonchliligimiz va mijozlar mamnuniyatiga sodiqligimizdan hech qachon chekinmaymiz!",
-      "desc": "Aloqa shakli",
-      "subdesc": "Savollaringizga javob berish uchun, iltimos, aloqa shaklini to‘ldirib biz bilan bog‘laning.",
-      "submit": "Yuborish",
-      "select": {
+    "title": "Biz mahsulot va xizmatlarimizni yetkazib berishda bo‘lgani kabi, sotuvdan keyingi xizmatlarimizda ham sifat va tafsilotlarga e’tibor borasida bir xil sadoqatni saqlaymiz.",
+    "subtitle": "Biz sizga kerak bo‘lgan har qanday paytda yoningizdamiz, ishonchliligimiz va mijozlar mamnuniyatiga sodiqligimizdan hech qachon chekinmaymiz!",
+    "desc": "Aloqa shakli",
+    "subdesc": "Savollaringizga javob berish uchun, iltimos, aloqa shaklini to‘ldirib biz bilan bog‘laning.",
+    "submit": "Yuborish",
+    "select": {
       "selectType": "Turini tanlang",
       "exterior": "Tashqi ko‘rinish",
       "interior": "Ichki ko‘rinish",
       "both": "Tashqi va ichki ko‘rinish"
-},
+    },
     "successMsg": "Xabar muvaffaqiyatli yuborildi",
     "errorMsg": "Nimadir xato ketdi"
-
-
-    } 
+  },
+  "team-desc":"Nova House uchun me’morchilik — bu shunchaki dizayn emas, balki ilhom bag‘ishlaydigan, ijodkorlik va qulaylik uyg‘unlashgan makonlar yaratish san’atidir. Bizning jamoamiz zamonaviy estetikani inson tajribasi bilan uyg‘unlashtirib, texnik aniqlik va innovatsion tafakkurni birlashtirgan holda, har bir makonni hayot bilan to‘ldiradi.",
+  "team-members":"Bizning jamoa a'zolari",
+  "team-title": "Nova House ortidagi fikrlar bilan tanishing"
 }

@@ -1,19 +1,26 @@
-import { memo } from 'react';
-import { useTeam } from '../services/useTeam';
-import TeamComp from '../components/TeamComp';
+import { memo } from "react";
+import { useTeam } from "../services/useTeam";
+import TeamComp from "../components/TeamComp";
+import { useTranslation } from "react-i18next";
+import LoadingSkaleton from "../components/LoadingSkaleton";
 
 const Team = () => {
-  const { getTeamMembers } = useTeam()
-  const { data } = getTeamMembers()  
+  const { getTeamMembers } = useTeam();
+  const { data, isFetching } = getTeamMembers();
+  const { t } = useTranslation();
+
   return (
-    <section className='w-full bg-[#f4f5f5] py-[60px] flex flex-col gap-5'>
-      <div className='container'>
-        <h2 className='text-3xl/[1.4] font-semibold'>Meet the Minds Behind Nova House</h2>
-      <p className='w-[400px] text-lg/[1.2] text-gray-600 font-medium'>
-        At Nova House, architecture is more than design — it’s the art of shaping spaces that inspire connection, creativity, and comfort. Our team blends visionary thinking with technical precision to craft environments where modern aesthetics meet human experience.
-      </p>
+    <section className="w-full bg-[#f4f5f5] py-[60px] flex flex-col gap-5">
+      <div className="container">
+        <h2 className="text-3xl/[1.4] font-medium">
+         {t("team-title")}
+        </h2>
+        <p className=" max-w-[500px] w-[100%]  mb-[20px] font-extralight  text-[#848484] ">
+          {t("team-desc")}
+        </p>
       </div>
-      <TeamComp data={data}/>
+      <h2 className="container font-light text-[22px] mb-[16px]">{ t("team-members")}</h2>
+      {isFetching ? <LoadingSkaleton /> : <TeamComp data={data} />}
     </section>
   );
 };

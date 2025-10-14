@@ -7,7 +7,6 @@ import { Facebook, Instagram } from "lucide-react";
 import { FaPinterestP } from "react-icons/fa";
 
 const Footer = () => {
-
   const [clean, setClean] = useState<string>("");
   const { t } = useTranslation();
   const year = new Date().getFullYear();
@@ -21,7 +20,7 @@ const Footer = () => {
     setClean("");
   };
   return (
-    <footer className="bg-[#1e1e1e] pb-50px relative bottom-0 w-full ">
+    <footer className="bg-[#1e1e1e] pb-50px   w-full ">
       <div
         className="container grid grid-cols-3 gap-[20px] max-[1060px]:grid-cols-2 
       max-[600px]:grid-cols-1"
@@ -58,12 +57,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="boder">
-          <img className="max-w-[300px] blobk mx-auto max-[600px]:max-w-[200px]" src={logo} alt="" />
-          
+        <div className="">
+          <img
+            className="max-w-[300px]  blobk mx-auto max-[600px]:max-w-[200px]"
+            src={logo}
+            alt=""
+          />
         </div>
         <div className="pt-[50px] max-[1060px]:col-span-2 max-[600px]:col-span-1 max-[600px]:pt-[0]">
-          <ul className="flex items-center max-[1060px]:justify-center gap-[20px] text-[#c9c9c9] font-extralight text-[14px] ">
+          <ul className="flex items-center flex-wrap max-[1060px]:justify-center gap-[14px] text-[#c9c9c9] font-extralight text-[14px] ">
             <li>
               <NavLink className={"link"} to={"/"}>
                 {t("footer.links.homepage")}
@@ -85,6 +87,11 @@ const Footer = () => {
               </NavLink>
             </li>
             <li>
+              <NavLink className={"link"} to={"/company"}>
+                {t("footer.links.company")}
+              </NavLink>
+            </li>
+            <li>
               <NavLink className={"link"} to={"/contact"}>
                 {t("footer.links.contact")}
               </NavLink>
@@ -95,15 +102,15 @@ const Footer = () => {
           </p>
           <a
             className="block text-[12px] mb-[6px] text-[#909090] max-[1060px]:text-center text-end"
-            href="mailto:info@elvemobilya.com.tr"
+            href="mailto:novahousedesignstudio@gmail.com"
           >
-            info@elvemobilya.com.tr
+            novahousedesignstudio@gmail.com
           </a>
           <a
             className="number-tel block text-[#909090] max-[1060px]:text-center  text-end text-[12px] "
-            href="tel:+998 90 651 88 18"
+            href="tel:+998 99 988 90 90"
           >
-            +998 90 651 88 18
+            +998 99 988 90 90
           </a>
           <div className="text-[#c9c9c9] flex items-center justify-end mt-[20px] gap-[14px] max-[1060px]:justify-center max-[1060px]:mb-[50px]">
             <Facebook />

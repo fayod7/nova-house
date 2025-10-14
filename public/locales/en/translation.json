@@ -4,10 +4,11 @@
     "description": "NOVA © Copyright {{year}} | All rights reserved.",
     "links": {
       "homepage": "Homepage",
-      "about": "About Us",
+      "about": "About ",
       "collection": "Collection",
-      "contact": "Contact Us",
-      "team": "Team"
+      "contact": "Contact ",
+      "team": "Team",
+      "company": "Company"
     },
     "button": {
       "subscribe": "Subscribe"
@@ -19,7 +20,7 @@
     "home": "Homepage",
     "about": "About",
     "collection": "Collection",
-    "contact": "Contact Us",
+    "contact": "Contact ",
     "team": "Team",
     "company": "Company",
     "search": "Search"
@@ -92,5 +93,8 @@
       },
       "successMsg": "Message sent successfully",
       "errorMsg": "Something went wrong"
-    } 
+    } ,
+    "team-desc":"At Nova House, architecture is more than design — it’s the art of shaping spaces that inspire connection, creativity, and comfort. Our team blends visionary thinking with technical precision to craft environments where modern aesthetics meet human experience.",
+    "team-members":"Our Team Members",
+    "team-title": "Meet the Minds Behind Nova House"
 }
