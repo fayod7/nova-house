@@ -73,11 +73,13 @@ const Company = () => {
           </div>
         </div>
       </div>
-      <h2 className="mt-[50px] text-center text-[28px]">{ t("locationTitle")}</h2>
+      <h2 className="mt-[50px] text-center text-[28px]">
+        {t("locationTitle")}
+      </h2>
       <div className="container flex items-center justify-center">
         <div className="w-[80%] max-[570px]:w-full border-[1.5px] border-[#eee] my-[40px] rounded-[22px] shadow-lg overflow-hidden shadow-[#ddd]">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.535401163661!2d69.209696!3d41.3331479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDEuMzMzMTQ3OSwgNjkuMjA5Njk2!5e0!3m2!1sen!2s!4v1697049946943!5m2!1sen!2s"
+            src="https://www.google.com/maps?q=41.333372,69.214491&z=17&output=embed"
             width="100%"
             height="420"
             className=""
