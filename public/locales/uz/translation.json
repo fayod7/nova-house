@@ -36,7 +36,7 @@
   "similar": "O‘xshash mahsulotlar",
   "company": {
     "title": "Kompaniyamiz haqida",
-    "description": "Biz yuqori sifatli mebellarni loyihalashtirib, yasaymiz — uyingizni qulaylik va nafislik maskaniga aylantiramiz.",
+    "description": "Biz mijozlarimiz uchun o‘ziga xos interyer va eksteryer konsepsiyalarini yaratamiz. Har bir detalda nafislik, sifat va zamonaviylikni uyg‘unlashtirib, uyingizni haqiqiy san’at asariga aylantiramiz.",
     "whoWe": "interyer va eksteryer yechimlari sohasida eng ishonchli brendlardan biriga aylandi. Mutaxassislarimiz zamonaviy dizaynni an’anaviy aniqlik bilan uygʻunlashtirib, estetika va qulaylik mukammal uygʻunlikda birlashgan makonlar yaratadi.",
     "subtitle": "Nega bizni tanlashadi",
     "design": "Zamonaviy dizayn",
@@ -81,8 +81,8 @@
   },
   "locationTitle": "Manzilimiz",
   "contactComp": {
-    "title": "Biz mahsulot va xizmatlarimizni yetkazib berishda bo‘lgani kabi, sotuvdan keyingi xizmatlarimizda ham sifat va tafsilotlarga e’tibor borasida bir xil sadoqatni saqlaymiz.",
-    "subtitle": "Biz sizga kerak bo‘lgan har qanday paytda yoningizdamiz, ishonchliligimiz va mijozlar mamnuniyatiga sodiqligimizdan hech qachon chekinmaymiz!",
+    "title": "Biz har bir mijoz bilan aloqani qadrlaymiz. Interyer va eksteryer loyihalarida nafaqat mukammal dizayn, balki mukammal xizmat ko‘rsatish tamoyiliga ham amal qilamiz.",
+    "subtitle": "Loyihaning har bir bosqichida siz bilan birga bo‘lamiz — maslahatdan tortib yakuniy natijagacha. Bizning jamoamiz ishonch, sifat va mukammallikka sodiq.",
     "desc": "Aloqa shakli",
     "subdesc": "Savollaringizga javob berish uchun, iltimos, aloqa shaklini to‘ldirib biz bilan bog‘laning.",
     "submit": "Yuborish",
