@@ -25,7 +25,7 @@ const LanguageSelect = () => {
   return (
     
     <>
-      <div className="relative w-[130px] text-[14px]">
+      <div className="relative w-[130px] text-[14px] max-[500px]:w-[105px] max-[500px]:text-[10px]">
       
         <button
           type="button"
