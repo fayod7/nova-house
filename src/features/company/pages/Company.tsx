@@ -1,7 +1,7 @@
 import { memo, useEffect } from "react";
 import { CheckCircle, Users, Building2, Award } from "lucide-react";
 import { useTranslation } from "react-i18next";
-
+import tables from '../../../shared/assets/tables.jpg'
 const Company = () => {
   const { t } = useTranslation();
   useEffect(() => {
@@ -12,10 +12,9 @@ const Company = () => {
     <section className="bg-[#f9f7f4] text-[#2d2d2d]">
       <div
         className="relative h-[70vh] flex items-center justify-center bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1500')",
-        }}
+         style={{
+        backgroundImage: `url(${tables})`,
+      }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative text-center text-white px-4">
