@@ -1,6 +1,6 @@
 import { memo, type FC } from 'react';
 
-
+import tables from '../../../shared/assets/tables.jpg'
 interface Props {
     title: string
 }
@@ -10,10 +10,9 @@ const ReusableComp:FC<Props> = (props) => {
   return (
          <div
         className="relative h-[70vh] flex items-center justify-center bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1500')",
-        }}
+         style={{
+        backgroundImage: `url(${tables})`, 
+      }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative text-center text-white px-4">
