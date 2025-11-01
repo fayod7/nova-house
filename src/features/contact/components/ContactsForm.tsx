@@ -21,6 +21,7 @@ const ContactsForm:FC<Props> = ({ handleSuccess }) => {
     const [square, setSquare] = useState<string>('')
     const [address, setAddress] = useState<string>('')
     const [type, setType] =  useState<string>('')
+    const [client, setClient] = useState<string>('')
     const handleSubmit = async(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         const msg = {
@@ -28,7 +29,8 @@ const ContactsForm:FC<Props> = ({ handleSuccess }) => {
             number,
             square,
             address,
-            type
+            type,
+            client
         }
         
         try {
@@ -43,6 +45,7 @@ Phone: <b>${msg.number}</b>
 Address: <b>${msg.address}</b>
 Square: <b>${msg.square}</b>
 Type: <b>${msg.type}</b>
+Client: <b>${msg.client}</b>
     `,
     parse_mode: "HTML",
   },
@@ -63,6 +66,15 @@ Type: <b>${msg.type}</b>
     { label: t("contactComp.select.interior"), value: "interior" },
     { label: t("contactComp.select.both"), value: "both" },
   ];
+  const clientOptions =  [
+    {
+      label: t("contactComp.typeSelect.first"), value: "First time client"
+    },
+    {
+      label: t("contactComp.typeSelect.sec"), value: "Returning client"
+    },
+
+  ]
   return (
     <section className='py-[50px] w-full'>
       <div className="container grid grid-cols-2 max-[650px]:grid-cols-1">
@@ -137,6 +149,14 @@ Type: <b>${msg.type}</b>
               selected={typeOptions.find((opt) => opt.value === type)?.value ?? null}
               onSelect={(value) => setType(value as string)}
               allLabel={t("contactComp.select.selectType")}
+            />
+            <label>{t("contactComp.clientLabel")}</label>
+            <ReusableDropdown 
+            label='First time'
+            options={clientOptions}
+            selected={ clientOptions.find((opt) => opt.value === client)?.value ?? null }
+            onSelect={(value) => setClient( value as string )}
+            allLabel={t("contactComp.clientLabel")}
             />
           </div>
             <div>

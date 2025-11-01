@@ -92,6 +92,11 @@
       "interior": "Ichki ko‘rinish",
       "both": "Tashqi va ichki ko‘rinish"
     },
+     "typeSelect": {
+        "first": "Ha",
+        "sec": "Yoq"
+      },
+    "clientLabel": "Siz biz bilan birinchi marta ishlayapsizmi?",
     "successMsg": "Xabar muvaffaqiyatli yuborildi",
     "errorMsg": "Nimadir xato ketdi"
   },
