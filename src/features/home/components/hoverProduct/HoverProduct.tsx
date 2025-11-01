@@ -6,9 +6,9 @@ import "./HoverProduct.css";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import stone from "../../../../shared/assets/imageHomepage/inner1.jpg";
-import ndStone from "../../../../shared/assets/imageHomepage/innder2.jpg";
-import rdStone from "../../../../shared/assets/imageHomepage/inner3.jpg";
+import stone from "../../../../shared/assets/imageHomepage/homepage-1.jpg";
+import ndStone from "../../../../shared/assets/imageHomepage/homepage-2.jpg";
+import rdStone from "../../../../shared/assets/imageHomepage/homepage-3.jpg";
 
 const HoverProduct = () => {
   return (
