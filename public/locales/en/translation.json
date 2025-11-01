@@ -93,6 +93,11 @@
         "interior": "Interior",
         "both": "Both Exterior & Interior"
       },
+      "typeSelect": {
+        "first": "yes",
+        "sec": "no"
+      },
+      "clientLabel": "Are you a first-time client?",  
       "successMsg": "Message sent successfully",
       "errorMsg": "Something went wrong"
     } ,
