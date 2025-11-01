@@ -6,9 +6,9 @@ import "./HoverProduct.css";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import livingRoom from "../../../../shared/assets/imageHomepage/out1.jpg";
-import bedroom from "../../../../shared/assets/imageHomepage/out2.jpg";
-import kitchen from "../../../../shared/assets/imageHomepage/out3.jpg";
+import livingRoom from "../../../../shared/assets/imageHomepage/homepage-4.jpg";
+import bedroom from "../../../../shared/assets/imageHomepage/homepage-5.jpg";
+import kitchen from "../../../../shared/assets/imageHomepage/homepage-6.jpg";
 
 import "./HoverProduct.css";
 
