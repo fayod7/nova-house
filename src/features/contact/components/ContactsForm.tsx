@@ -68,10 +68,10 @@ Client: <b>${msg.client}</b>
   ];
   const clientOptions =  [
     {
-      label: t("contactComp.typeSelect.first"), value: "First time client"
+      label: t("contactComp.typeSelect.first"), value: "Yangi mijoz"
     },
     {
-      label: t("contactComp.typeSelect.sec"), value: "Returning client"
+      label: t("contactComp.typeSelect.sec"), value: "Eski mijoz"
     },
 
   ]
