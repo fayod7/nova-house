@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { memo, useState, type FC, type FormEvent } from 'react';
+import { memo, useEffect, useState, type FC, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReusableDropdown from '../../../layout/components/reuseable-dropdown/ReusableDropdown';
 
@@ -16,12 +16,26 @@ const ContactsForm:FC<Props> = ({ handleSuccess }) => {
     setAddress("");
     setType("");
     }
+    
     const [fullName, setFullName] = useState<string>('')
     const [number, setNumber] = useState<string>('')
     const [square, setSquare] = useState<string>('')
     const [address, setAddress] = useState<string>('')
     const [type, setType] =  useState<string>('')
     const [client, setClient] = useState<string>('')
+    const [calculatedPrice, setCalculatedPrice] = useState<string | null | number>('')
+  useEffect(() => {
+  if (!square || !client) {
+    setCalculatedPrice(null);
+    return;
+  }
+
+  const price = client === 'Yangi mijoz'
+    ? Number(square) * 12
+    : Number(square) * 15;
+
+  setCalculatedPrice(price);
+}, [square, client]);
     const handleSubmit = async(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         const msg = {
@@ -159,6 +173,11 @@ Client: <b>${msg.client}</b>
             allLabel={t("contactComp.clientLabel")}
             />
           </div>
+       {calculatedPrice !== null && (
+  <div className="mt-2 text-lg font-semibold">
+    {t("contactsForm.total")}: {calculatedPrice}
+  </div>
+)}
             <div>
             <button className='border py-2 px-5 duration-200 hover:cursor-pointer hover:bg-black hover:text-white'>{t("contactComp.submit")}</button>
             </div>
