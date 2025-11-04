@@ -44,7 +44,8 @@ const ContactsForm:FC<Props> = ({ handleSuccess }) => {
             square,
             address,
             type,
-            client
+            client,
+            calculatedPrice
         }
         
         try {
@@ -60,6 +61,7 @@ Address: <b>${msg.address}</b>
 Square: <b>${msg.square}</b>
 Type: <b>${msg.type}</b>
 Client: <b>${msg.client}</b>
+Price: <b>${msg.calculatedPrice ?? '-'}</b>
     `,
     parse_mode: "HTML",
   },
