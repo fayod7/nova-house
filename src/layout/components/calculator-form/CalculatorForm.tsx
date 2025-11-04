@@ -92,7 +92,7 @@ const CalculatorForm:FC<Props> = ({ isShown, setIsShown }) => {
 
  {calc !== null && typeof calc === 'number' && (
   <p className='text-[20px]'>
-    {t("calc.total")}: <strong className='text-green-800'>{calc}$</strong>
+    {t("calc.total")} <strong className='text-green-800'>{calc}$</strong>
   </p>
 )}
 
