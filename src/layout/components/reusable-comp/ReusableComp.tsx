@@ -1,6 +1,7 @@
 import { memo, type FC } from 'react';
 
-import tables from '../../../shared/assets/hoverImages/reusable.jpg'
+
+import tables from '../../../shared/assets/last/d.jpg'
 interface Props {
     title: string
 }

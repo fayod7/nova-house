@@ -1,8 +1,9 @@
 import { memo, useEffect, useState } from 'react';
-import ReusableComp from '../../../layout/components/reusable-comp/ReusableComp';
+
 import ContactsForm from '../components/ContactsForm';
 import { useTranslation } from 'react-i18next';
 import SuccessModal from '../components/SuccessModal';
+import Usual from '../components/Usual';
 const Contact = () => {
   const {t} = useTranslation()
   const [showSuccess, setShowSuccess] = useState<boolean>(false)
@@ -24,7 +25,7 @@ const Contact = () => {
   };
   return (
     <div>
-      <ReusableComp title={t("reusable.contact")} />
+      <Usual title={t("reusable.contact")} />
       <div className='bg-[#f5f5f5] w-full py-[100px]'>
           <div className='container flex flex-col gap-2 justify-center items-center'>
             <h2>
