@@ -1,7 +1,7 @@
 import { memo, useEffect } from "react";
 import { CheckCircle, Users, Building2, Award } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import tables from '../../../shared/assets/tables.jpg'
+import tables from '../../../shared/assets/last/5.jpg'
 const Company = () => {
   const { t } = useTranslation();
   useEffect(() => {
